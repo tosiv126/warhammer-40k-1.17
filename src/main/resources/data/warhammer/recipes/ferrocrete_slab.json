@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "warhammer:ferrocrete_block"
+    }
+  },
+  "result": {
+    "item": "warhammer:ferrocrete_slab",
+    "count": 6
+  }
+}

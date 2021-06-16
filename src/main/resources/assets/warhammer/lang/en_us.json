@@ -1,0 +1,71 @@
+{
+  "itemGroup.warhammer.general": "Warhammer 40K",
+  "itemGroup.warhammer.weapons": "Weapons",
+  "itemGroup.warhammer.ammo": "Ammunition",
+  "item.warhammer.autopistol.tooltip.augment_0": "Augments [%d/%d]:",
+  "item.warhammer.autopistol.tooltip.augment_1": "- %d",
+  "item.warhammer.autopistol.tooltip.augment_2": "- %d",
+  "item.warhammer.autopistol.tooltip.augment_3": "- %d",
+  "warhammer.blank": "",
+  "item.warhammer.autopistol.tooltip.ammo": "Ammo: %d/%d",
+
+  "item.warhammer.nutrient_paste": "Nutrient Paste",
+
+  "item.warhammer.raw_adamantium" : "Raw Adamantium",
+  "item.warhammer.raw_ceramite" : "Raw Ceramite",
+  "item.warhammer.raw_plasteel" : "Raw Plasteel",
+  "item.warhammer.adamantium_ingot" : "Adamantium Ingot",
+  "item.warhammer.ceramite_ingot" : "Ceramite Ingot",
+  "item.warhammer.plasteel_ingot" : "Plasteel Ingot",
+
+  "item.warhammer.plasteel_pickaxe" : "Plasteel Pickaxe",
+
+  "block.warhammer.adamantium_ore_block" : "Adamantium Ore",
+  "block.warhammer.ceramite_ore_block" : "Ceramite Ore",
+  "block.warhammer.nether_adamantium_ore_block" : "Nether Adamantium Ore",
+  "block.warhammer.nether_ceramite_ore_block" : "Nether Ceramite Ore",
+  "block.warhammer.end_adamantium_ore_block" : "End Adamantium Ore",
+  "block.warhammer.end_ceramite_ore_block" : "End Ceramite Ore",
+
+  "block.warhammer.ferrocrete_block": "Ferrocrete",
+  "block.warhammer.ferrocrete_green_block": "Green Ferrocrete",
+  "block.warhammer.ferrocrete_side_block": "Ferrocrete Side Slab",
+  "block.warhammer.ferrocrete_side_green_block": "Green Ferrocrete Side Slab",
+  "block.warhammer.ferrocrete_slab": "Ferrocrete Slab",
+  "block.warhammer.ferrocrete_green_slab": "Green Ferrocrete Slab",
+  "block.warhammer.ferrocrete_stairs": "Ferrocrete Stairs",
+  "block.warhammer.ferrocrete_green_stairs": "Green Ferrocrete Stairs",
+  "block.warhammer.ferrocrete_decorated_block" : "Decorated Ferrocrete",
+
+  "block.warhammer.plasteel_block": "Plasteel Block",
+  "block.warhammer.ceramite_block": "Ceramite Block",
+  "block.warhammer.adamantium_block": "Adamantium Block",
+
+  "block.warhammer.necron_block": "Necron Block",
+  "block.warhammer.necron_glyph_block": "Necron Glyph Block",
+  "block.warhammer.necron_light_block": "Necron Light Block",
+  "block.warhammer.ork_block": "Ork Block",
+
+  "block.warhammer.computer_block": "Computer Block",
+  "block.warhammer.red_barrel": "Red Barrel",
+
+  "item.warhammer.flak_helmet" : "Flak Helmet",
+  "item.warhammer.flak_chest" : "Flak Chest Piece",
+  "item.warhammer.flak_leggings" : "Flak Leggings",
+  "item.warhammer.flak_boots" : "Flak Boots",
+
+  "item.warhammer.valhallan_flak_helmet" : "Valhallan Flak Helmet",
+  "item.warhammer.valhallan_flak_chest" : "Valhallan Flak Chest Piece",
+  "item.warhammer.valhallan_flak_leggings" : "Valhallan Flak Leggings",
+  "item.warhammer.valhallan_flak_boots" : "Valhallan Flak Boots",
+
+  "warhammer.flak_armor.text" : "Equipment of the Imperial Guard",
+
+  "achievement.warhammer.Root" : "Warhammer 40K",
+  "achievement.warhammer.Root.desc" : "In the Grim Darkness of the Far Future there is Only War.",
+  "achievement.warhammer.PlasteelIngot" : "A New Alloy",
+  "achievement.warhammer.PlasteelIngot.desc" : "Smelt a piece of raw plasteel",
+  "achievement.warhammer.NutrientPaste" : "Does This Count as Food?",
+  "achievement.warhammer.NutrientPaste.desc" : "Craft a Nutrient Paste Meal"
+
+}

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "w w",
+        "L L"
+    ],
+    "key": {
+        "w": {
+            "item": "warhammer:plasteel_ingot"
+        },
+        "L": {
+            "item": "warhammer:ceramite_ingot"
+        }
+    },
+    "result": {
+        "item": "warhammer:flak_boots",
+        "count": 1
+    }
+}

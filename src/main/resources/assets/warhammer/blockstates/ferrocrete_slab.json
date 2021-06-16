@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "warhammer:block/ferrocrete_slab"
+    },
+    "type=double": {
+      "model": "warhammer:block/ferrocrete_block"
+    },
+    "type=top": {
+      "model": "warhammer:block/ferrocrete_slab_top"
+    }
+  }
+}

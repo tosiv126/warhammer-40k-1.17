@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "w"
+    ],
+    "key": {
+        "w": {
+            "item": "warhammer:ceramite_block"
+        }
+    },
+    "result": {
+        "item": "warhammer:ceramite_ingot",
+        "count": 9
+    }
+}

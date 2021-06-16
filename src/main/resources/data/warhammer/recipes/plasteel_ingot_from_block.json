@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "w"
+    ],
+    "key": {
+        "w": {
+            "item": "warhammer:plasteel_block"
+        }
+    },
+    "result": {
+        "item": "warhammer:plasteel_ingot",
+        "count": 9
+    }
+}

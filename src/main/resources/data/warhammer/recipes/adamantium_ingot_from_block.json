@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "w"
+    ],
+    "key": {
+        "w": {
+            "item": "warhammer:adamantium_block"
+        }
+    },
+    "result": {
+        "item": "warhammer:adamantium_ingot",
+        "count": 9
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "warhammer:plasteel_ingot"
+    },
+    "title": {
+      "translate": "achievement.warhammer.PlasteelIngot"
+    },
+    "description": {
+      "translate": "achievement.warhammer.PlasteelIngot.desc"
+    }
+  },
+  "parent": "warhammer:main/root",
+  "criteria": {
+    "certus": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "warhammer:plasteel_ingot"
+          }
+        ]
+      }
+    }
+  }
+}

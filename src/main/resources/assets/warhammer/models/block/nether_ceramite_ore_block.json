@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "warhammer:blocks/nether_ceramite_ore_block"
+  }
+}

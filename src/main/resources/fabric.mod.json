@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "warhammer",
+  "version": "${version}",
+
+  "name": "Warhammer 40k Mod",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Tosiv"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/tosiv126/warhammer_mod_1.17"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/warhammer/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.tosiv.warhammer.Warhammer"
+    ]
+  },
+  "mixins": [],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

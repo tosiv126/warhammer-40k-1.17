@@ -1,0 +1,54 @@
+{
+
+  "item.warhammer.autopistol": "Автоматический пистолет",
+  "block.warhammer.weapons_table": "Таблица оружия",
+  "itemGroup.warhammer.general": "Warhammer 40K",
+  
+
+  "item.warhammer.nutrient_paste": "Питательная Паста",
+
+  "item.warhammer.raw_adamantium" : "Необработанный адамантий",
+  "item.warhammer.raw_ceramite" : "Необработанный керамит",
+  "item.warhammer.raw_plasteel" : "Необработанная Пласталь",
+  "item.warhammer.adamantium_ingot" : "Слиток адамантия",
+  "item.warhammer.ceramite_ingot" : "Керамический Слиток",
+  "item.warhammer.plasteel_ingot" : "Слиток пластали",
+
+  "item.warhammer.plasteel_pickaxe" : "Пласталевая кирка",
+
+  "block.warhammer.adamantium_ore_block" : "Адамантиевая руда",
+  "block.warhammer.ceramite_ore_block" : "Керамическая руда",
+  "block.warhammer.nether_adamantium_ore_block" : "Нижняя Адамантиевая руда",
+  "block.warhammer.nether_ceramite_ore_block" : "Керамитовая руда нижнего мира",
+  "block.warhammer.end_adamantium_ore_block" : "Адамантитовая руда края",
+  "block.warhammer.end_ceramite_ore_block" : "Керамитовая руда края",
+
+  "block.warhammer.ferrocrete_block": "Феррокрит",
+  "block.warhammer.ferrocrete_green_block": "Зеленый феррокрит",
+  "block.warhammer.ferrocrete_side_block": "Феррокритовая боковая плита",
+  "block.warhammer.ferrocrete_side_green_block": "Зелёная феррокритовая боковая плита",
+  "block.warhammer.ferrocrete_slab": "Феррокритовая плита",
+  "block.warhammer.ferrocrete_green_slab": "Зелёная феррокритовая плита",
+  "block.warhammer.ferrocrete_stairs": "Феррокритовая Лестница",
+  "block.warhammer.ferrocrete_green_stairs": "Зелёная феррокритовая Лестница",
+
+  "item.warhammer.flak_helmet" : "Бронированный шлем",
+  "item.warhammer.flak_chest" : "Бронированный нагрудник",
+  "item.warhammer.flak_leggings" : "Бронированные штаны",
+  "item.warhammer.flak_boots" : "Бронированные ботинки",
+
+  "item.warhammer.valhallan_flak_helmet" : "Валгалла бронированный шлем",
+  "item.warhammer.valhallan_flak_chest" : "Валгалла бронированный нагрудник",
+  "item.warhammer.valhallan_flak_leggings" : "Валгалла бронированные штаны",
+  "item.warhammer.valhallan_flak_boots" : "Валгалла бронированные ботинки",
+
+  "warhammer.flak_armor.text" : "Экипировка Императорской гвардии",
+
+  "achievement.warhammer.Root" : "Warhammer 40K",
+  "achievement.warhammer.Root.desc" : "В Мрачной Тьме Далекого Будущего есть только Война.",
+  "achievement.warhammer.PlasteelIngot" : "Новый Сплав",
+  "achievement.warhammer.PlasteelIngot.desc" : "выплавите кусок необработанной пластали",
+  "achievement.warhammer.NutrientPaste" : "Считается ли Это едой?",
+  "achievement.warhammer.NutrientPaste.desc" : "Приготовьте питательную пасту"
+
+}

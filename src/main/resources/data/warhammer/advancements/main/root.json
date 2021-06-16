@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "warhammer:raw_plasteel"
+    },
+    "title": {
+      "translate": "achievement.warhammer.Root"
+    },
+    "description": {
+      "translate": "achievement.warhammer.Root.desc"
+    },
+    "background": "warhammer:textures/blocks/ferrocrete_block.png",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "certus": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "warhammer:raw_plasteel"
+          }
+        ]
+      }
+    }
+  }
+}

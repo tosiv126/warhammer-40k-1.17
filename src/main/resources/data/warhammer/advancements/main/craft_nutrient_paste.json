@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "warhammer:nutrient_paste"
+    },
+    "title": {
+      "translate": "achievement.warhammer.NutrientPaste"
+    },
+    "description": {
+      "translate": "achievement.warhammer.NutrientPaste.desc"
+    }
+  },
+  "parent": "warhammer:main/smelt_plasteel",
+  "criteria": {
+    "certus": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "warhammer:nutrient_paste"
+          }
+        ]
+      }
+    }
+  }
+}

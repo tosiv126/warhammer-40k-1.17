@@ -1,0 +1,9 @@
+{
+  "parent": "warhammer:block/computer",
+  "textures": {
+    "bottom": "warhammer:blocks/computer_block",
+    "top": "warhammer:blocks/computer_block",
+    "side": "warhammer:blocks/computer_side",
+    "front": "warhammer:blocks/computer_front"
+  }
+}

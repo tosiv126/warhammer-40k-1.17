@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "BOB",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "warhammer:plasteel_ingot"
+    },
+    "B": {
+      "item": "minecraft:brown_mushroom"
+    },
+    "O": {
+      "item": "minecraft:bread"
+    }
+  },
+  "result": {
+    "item": "warhammer:nutrient_paste",
+    "count": 4
+  }
+}

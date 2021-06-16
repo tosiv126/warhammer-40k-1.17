@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# ",
+    "BR",
+    "# "
+  ],
+  "key": {
+    "#": {
+      "item": "warhammer:plasteel_ingot"
+    },
+    "B": {
+      "item": "minecraft:bread"
+    },
+    "R": {
+      "item": "minecraft:rotten_flesh"
+    }
+  },
+  "result": {
+    "item": "warhammer:nutrient_paste",
+    "count": 4
+  }
+}
