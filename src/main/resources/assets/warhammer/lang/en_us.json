@@ -44,7 +44,11 @@
   "block.warhammer.necron_block": "Necron Block",
   "block.warhammer.necron_glyph_block": "Necron Glyph Block",
   "block.warhammer.necron_light_block": "Necron Light Block",
+  "block.warhammer.necron_stairs" : "Necron Stairs",
   "block.warhammer.ork_block": "Ork Block",
+
+  "item.warhammer.bullet": "Bullet",
+  "item.warhammer.bolter_round": "Bolter Round",
 
   "block.warhammer.computer_block": "Computer Block",
   "block.warhammer.red_barrel": "Red Barrel",

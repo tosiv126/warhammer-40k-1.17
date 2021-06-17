@@ -12,12 +12,14 @@
   },
   "parent": "warhammer:main/smelt_plasteel",
   "criteria": {
-    "certus": {
+    "craft_nutrient_paste": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "warhammer:nutrient_paste"
+            "items": [
+              "warhammer:nutrient_paste"
+            ]
           }
         ]
       }

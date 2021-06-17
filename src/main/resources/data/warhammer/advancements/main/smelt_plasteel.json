@@ -12,12 +12,14 @@
   },
   "parent": "warhammer:main/root",
   "criteria": {
-    "certus": {
+    "smelt_plasteel": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "warhammer:plasteel_ingot"
+            "items": [
+              "warhammer:plasteel_ingot"
+            ]
           }
         ]
       }

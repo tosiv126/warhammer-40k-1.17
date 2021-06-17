@@ -14,12 +14,14 @@
     "announce_to_chat": false
   },
   "criteria": {
-    "certus": {
+    "root": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "warhammer:raw_plasteel"
+            "items": [
+              "warhammer:raw_plasteel"
+            ]
           }
         ]
       }

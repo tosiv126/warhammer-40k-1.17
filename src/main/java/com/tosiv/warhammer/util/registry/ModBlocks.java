@@ -107,6 +107,7 @@ public class ModBlocks {
     public static final Block ADAMANTIUM_BLOCK = new Block(FabricBlockSettings.copy(ModBlocks.PLASTEEL_BLOCK));
     public static final Block NECRON_GLYPH_BLOCK = new NecronGlyphBlock(FabricBlockSettings.copy(ModBlocks.NECRON_BLOCK));
     public static final Block ORK_BLOCK = new Block(FabricBlockSettings.copy(ModBlocks.PLASTEEL_BLOCK));
+    public static final StairsBlock NECRON_STAIRS = new CustomStairsBlock(ModBlocks.NECRON_BLOCK.getDefaultState());
 
 
 
@@ -134,6 +135,7 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "necron_block"), NECRON_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "necron_glyph_block"), NECRON_GLYPH_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "necron_light_block"), NECRON_LIGHT_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "necron_stairs"), NECRON_STAIRS);
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ork_block"), ORK_BLOCK);
 
@@ -189,6 +191,8 @@ public class ModBlocks {
                 new BlockItem(NECRON_LIGHT_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ork_block"),
                 new BlockItem(ORK_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "necron_stairs"),
+                new BlockItem(NECRON_STAIRS, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
     }
 }
