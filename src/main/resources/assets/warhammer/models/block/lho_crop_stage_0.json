@@ -1,0 +1,6 @@
+{
+  "parent": "warhammer:block/cross",
+  "textures": {
+    "cross": "warhammer:blocks/lho_crop_stage_0"
+  }
+}

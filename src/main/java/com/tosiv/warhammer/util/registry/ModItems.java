@@ -3,6 +3,9 @@ package com.tosiv.warhammer.util.registry;
 import com.tosiv.warhammer.PlasteelToolMaterial;
 import com.tosiv.warhammer.Warhammer;
 import com.tosiv.warhammer.item.CustomPickaxeItem;
+import com.tosiv.warhammer.item.LhoCropItem;
+import com.tosiv.warhammer.item.LhoSeedsItem;
+import com.tosiv.warhammer.item.SmokedItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolItem;
@@ -44,6 +47,20 @@ public class ModItems {
             .group(Warhammer.AMMO_GROUP)
             .rarity(Rarity.COMMON));
 
+    //Drugs
+    public static final SmokedItem LHO_STICK = new SmokedItem(new Item.Settings()
+            .group(Warhammer.GENERAL_GROUP)
+            .food(new FoodComponent.Builder()
+                    .hunger(0)
+                    .saturationModifier(4.0f)
+                    .alwaysEdible()
+                    .build()));
+
+    //Seeds
+    public static final LhoSeedsItem LHO_SEEDS = new LhoSeedsItem(ModBlocks.LHO_CROP, (new Item.Settings().group(Warhammer.GENERAL_GROUP)));
+
+    //Crop Items
+    public static final LhoCropItem LHO_LEAF = new LhoCropItem((new Item.Settings().group(Warhammer.GENERAL_GROUP)));
 
     //Tools
     public static ToolItem PLASTEEL_PICKAXE = new CustomPickaxeItem(PlasteelToolMaterial.INSTANCE, 1, -2.8f, new Item.Settings().group(Warhammer.GENERAL_GROUP));
@@ -66,6 +83,12 @@ public class ModItems {
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID,"bolter_round"), BOLTER_ROUND);
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID,"bullet"), BULLET);
+
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "lho_seeds"), LHO_SEEDS);
+
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "lho_leaf"), LHO_LEAF);
+
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "lho_stick"), LHO_STICK);
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "wh_icon"), WH_ICON);
     }

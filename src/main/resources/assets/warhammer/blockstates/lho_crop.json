@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": { "model": "warhammer:block/lho_crop_stage_0" },
+    "age=1": { "model": "warhammer:block/lho_crop_stage_1" },
+    "age=2": { "model": "warhammer:block/lho_crop_stage_2" },
+    "age=3": { "model": "warhammer:block/lho_crop_stage_3" },
+    "age=4": { "model": "warhammer:block/lho_crop_stage_4" },
+    "age=5": { "model": "warhammer:block/lho_crop_stage_5" },
+    "age=6": { "model": "warhammer:block/lho_crop_stage_6" },
+    "age=7": { "model": "warhammer:block/lho_crop_stage_7" }
+  }
+}

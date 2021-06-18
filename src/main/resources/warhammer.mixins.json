@@ -1,12 +1,14 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
+  "package": "com.tosiv.warhammer.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
   ],
   "client": [
-    "net.tosiv.example.mixin.ExampleMixin"
+    "ClientPlayerEntityMixin",
+    "MinecraftClientMixin",
+    "PlayerEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -2,12 +2,21 @@
   "itemGroup.warhammer.general": "Warhammer 40K",
   "itemGroup.warhammer.weapons": "Weapons",
   "itemGroup.warhammer.ammo": "Ammunition",
-  "item.warhammer.autopistol.tooltip.augment_0": "Augments [%d/%d]:",
-  "item.warhammer.autopistol.tooltip.augment_1": "- %d",
-  "item.warhammer.autopistol.tooltip.augment_2": "- %d",
-  "item.warhammer.autopistol.tooltip.augment_3": "- %d",
-  "warhammer.blank": "",
-  "item.warhammer.autopistol.tooltip.ammo": "Ammo: %d/%d",
+
+  "tooltip.warhammer.capacity": "§3[§bCapacity§3] ",
+  "tooltip.warhammer.explodes": "§3[§bExplosive§3]",
+  "tooltip.warhammer.capacities": "§3[§bAccepted Magazine Capacities§3] ",
+  "tooltip.warhammer.caliber": "§3[§bCaliber§3] ",
+  "tooltip.warhammer.damage": "§3[§bDamage§3] ",
+  "tooltip.warhammer.shift_for_info": "§5[§dHold SHIFT to display loaded cartridges§5]",
+
+  "key.warhammer": "Reload",
+  "category.warhammer.warhammer": "Warhammer 40K",
+
+  "item.warhammer.drum_magazine": "Drum Magazine",
+  "item.warhammer.box_magazine": "Box Magazine",
+  "item.warhammer.magazine": "Magazine",
+  "item.warhammer.cartridge": "Cartridge",
 
   "item.warhammer.nutrient_paste": "Nutrient Paste",
 
@@ -52,16 +61,6 @@
 
   "block.warhammer.computer_block": "Computer Block",
   "block.warhammer.red_barrel": "Red Barrel",
-
-  "item.warhammer.flak_helmet" : "Flak Helmet",
-  "item.warhammer.flak_chest" : "Flak Chest Piece",
-  "item.warhammer.flak_leggings" : "Flak Leggings",
-  "item.warhammer.flak_boots" : "Flak Boots",
-
-  "item.warhammer.valhallan_flak_helmet" : "Valhallan Flak Helmet",
-  "item.warhammer.valhallan_flak_chest" : "Valhallan Flak Chest Piece",
-  "item.warhammer.valhallan_flak_leggings" : "Valhallan Flak Leggings",
-  "item.warhammer.valhallan_flak_boots" : "Valhallan Flak Boots",
 
   "warhammer.flak_armor.text" : "Equipment of the Imperial Guard",
 

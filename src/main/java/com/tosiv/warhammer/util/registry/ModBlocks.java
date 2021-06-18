@@ -5,10 +5,7 @@ import com.tosiv.warhammer.block.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tools.FabricToolTags;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
@@ -94,6 +91,12 @@ public class ModBlocks {
             .strength(5.0f, 50.0f)
             .sounds(BlockSoundGroup.ANCIENT_DEBRIS)
             .luminance(12));
+    public static final LhoCropBlock LHO_CROP = new LhoCropBlock(FabricBlockSettings
+            .of(Material.PLANT)
+            .noCollision()
+            .ticksRandomly()
+            .strength(0.0f, 0.0f)
+            .sounds(BlockSoundGroup.CROP));
 
     public static final Block FERROCRETE_GREEN_BLOCK = new Block(FabricBlockSettings.copy(ModBlocks.FERROCRETE_BLOCK));
     public static final Block FERROCRETE_SIDE_BLOCK = new FerrocreteSideBlock(FabricBlockSettings.copy(ModBlocks.FERROCRETE_BLOCK));
@@ -142,6 +145,8 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "plasteel_block"), PLASTEEL_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ceramite_block"), CERAMITE_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "adamantium_block"), ADAMANTIUM_BLOCK);
+
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "lho_crop"), LHO_CROP);
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "adamantium_ore_block"),
                 new BlockItem(ADAMANTIUM_ORE_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));

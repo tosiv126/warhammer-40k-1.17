@@ -6,7 +6,8 @@
   "name": "Warhammer 40k Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Tosiv"
+    "Tosiv",
+    "LordDeatHunter"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -20,9 +21,16 @@
   "entrypoints": {
     "main": [
       "com.tosiv.warhammer.Warhammer"
-    ]
+    ],
+    "client": [
+      "com.tosiv.warhammer.client.WarhammerClient"
+      ]
   },
-  "mixins": [],
+  "mixins": [
+    "warhammer.mixins.json"
+  ],
+
+  "accessWidener" : "warhammer.accesswidener",
 
   "depends": {
     "fabricloader": ">=0.11.3",

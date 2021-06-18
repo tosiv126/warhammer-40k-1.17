@@ -3,5 +3,25 @@
     "sounds": [
       "warhammer:servitor_ambient1"
     ]
+  },
+  "bolterpistolshoot": {
+    "sounds": [
+      "warhammer:bolterpistolshoot"
+    ]
+  },
+  "boltershoot": {
+    "sounds": [
+      "warhammer:boltershoot"
+    ]
+  },
+  "bolthit": {
+    "sounds": [
+      "warhammer:bolthit"
+    ]
+  },
+  "boltreload": {
+    "sounds": [
+      "warhammer:boltreload"
+    ]
   }
 }
