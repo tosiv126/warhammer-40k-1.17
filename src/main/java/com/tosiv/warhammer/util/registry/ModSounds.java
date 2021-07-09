@@ -10,11 +10,15 @@ public class ModSounds {
     public static final Identifier SERVITOR_AMBIENT = new Identifier("warhammer:servitor_one_ambient");
     public static SoundEvent SERVITOR_AMBIENT_EVENT = new SoundEvent(SERVITOR_AMBIENT);
 
-    public static final Identifier BOLLTER_PISTOL_SHOOT = new Identifier("warhammer:bolterpistolshoot");
-    public static SoundEvent BOLLTER_PISTOL_SHOOT_EVENT = new SoundEvent(BOLLTER_PISTOL_SHOOT);
+    //Gun Sounds
+    public static final Identifier RELOAD = new Identifier("warhammer:reload");
+    public static SoundEvent RELOAD_EVENT = new SoundEvent(RELOAD);
 
-    public static final Identifier BOLLTER_SHOOT = new Identifier("warhammer:boltershoot");
-    public static SoundEvent BOLLTER_SHOOT_EVENT = new SoundEvent(BOLLTER_SHOOT);
+    public static final Identifier BOLTER_PISTOL_SHOOT = new Identifier("warhammer:bolterpistolshoot");
+    public static SoundEvent BOLTER_PISTOL_SHOOT_EVENT = new SoundEvent(BOLTER_PISTOL_SHOOT);
+
+    public static final Identifier BOLTER_SHOOT = new Identifier("warhammer:boltershoot");
+    public static SoundEvent BOLTER_SHOOT_EVENT = new SoundEvent(BOLTER_SHOOT);
 
     public static final Identifier BOLT_HIT = new Identifier("warhammer:bolthit");
     public static SoundEvent BOLT_HIT_EVENT = new SoundEvent(BOLT_HIT);
@@ -24,8 +28,9 @@ public class ModSounds {
 
     public static void registerSounds() {
         Registry.register(Registry.SOUND_EVENT, SERVITOR_AMBIENT, SERVITOR_AMBIENT_EVENT);
-        Registry.register(Registry.SOUND_EVENT, BOLLTER_PISTOL_SHOOT, BOLLTER_PISTOL_SHOOT_EVENT);
-        Registry.register(Registry.SOUND_EVENT, BOLLTER_SHOOT, BOLLTER_SHOOT_EVENT);
+        Registry.register(Registry.SOUND_EVENT, RELOAD, RELOAD_EVENT);
+        Registry.register(Registry.SOUND_EVENT, BOLTER_PISTOL_SHOOT, BOLTER_PISTOL_SHOOT_EVENT);
+        Registry.register(Registry.SOUND_EVENT, BOLTER_SHOOT, BOLTER_SHOOT_EVENT);
         Registry.register(Registry.SOUND_EVENT, BOLT_HIT, BOLT_HIT_EVENT);
         Registry.register(Registry.SOUND_EVENT, BOLT_RELOAD, BOLT_RELOAD_EVENT);
     }

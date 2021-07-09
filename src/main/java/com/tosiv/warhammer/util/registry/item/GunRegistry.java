@@ -17,7 +17,8 @@ public final class GunRegistry {
 
     private static final HashMap<String, Item> GUNS = new HashMap<>();
 
-    public static final GunItem BOLT_PISTOL_BASE;
+    public static final GunItem BOLT_PISTOL;
+    public static final GunItem BOLTER;
     public static final GunItem AUTOPISTOL;
     public static final GunItem AA12;
     public static final GunItem RIFLE;
@@ -36,11 +37,17 @@ public final class GunRegistry {
 
         FabricItemSettings defaultGunSettings = new FabricItemSettings().maxCount(1).group(GunItemGroups.GUNS);
 
-        BOLT_PISTOL_BASE = new GunItem(defaultGunSettings, Caliber.CAL_8, 1, false, 5, 1, 0.8F, 1F);
-        BOLT_PISTOL_BASE.addMagazineCapacity(8);
-        BOLT_PISTOL_BASE.setSound(GunItem.SoundType.SHOOT, ModSounds.BOLLTER_PISTOL_SHOOT_EVENT);
-        BOLT_PISTOL_BASE.setSound(GunItem.SoundType.RELOAD, ModSounds.BOLT_RELOAD_EVENT);
-        GUNS.put("bolt_pistol_base", BOLT_PISTOL_BASE);
+        BOLT_PISTOL = new GunItem(defaultGunSettings, Caliber.CAL_19, 10, false, 5, 1, 0.8F, 1F);
+        BOLT_PISTOL.addMagazineCapacity(12);
+        BOLT_PISTOL.setSound(GunItem.SoundType.SHOOT, ModSounds.BOLTER_PISTOL_SHOOT_EVENT);
+        BOLT_PISTOL.setSound(GunItem.SoundType.RELOAD, ModSounds.BOLT_RELOAD_EVENT);
+        GUNS.put("bolt_pistol", BOLT_PISTOL);
+
+        BOLTER = new GunItem(defaultGunSettings, Caliber.CAL_19, 20, true, 5, 1, 0.8F, 1F);
+        BOLTER.addMagazineCapacity(24);
+        BOLTER.setSound(GunItem.SoundType.SHOOT, ModSounds.BOLTER_SHOOT_EVENT);
+        BOLTER.setSound(GunItem.SoundType.RELOAD, ModSounds.BOLT_RELOAD_EVENT);
+        GUNS.put("bolter", BOLTER);
 
         AUTOPISTOL = new GunItem(defaultGunSettings, Caliber.CAL_9, 6, true, 2, 2, 0.8F, 1F);
         AUTOPISTOL.addMagazineCapacity(20);

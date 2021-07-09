@@ -10,7 +10,7 @@ public class BoxMagazineItem extends MagazineItem {
 
     @Override
     public String getTranslationKey() {
-        return "item.customizable_guns.box_magazine";
+        return "item.warhammer.box_magazine";
     }
 
 }

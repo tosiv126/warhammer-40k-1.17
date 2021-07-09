@@ -10,7 +10,7 @@ public class DrumMagazineItem extends MagazineItem {
 
     @Override
     public String getTranslationKey() {
-        return "item.customizable_guns.drum_magazine";
+        return "item.warhammer.drum_magazine";
     }
 
 }

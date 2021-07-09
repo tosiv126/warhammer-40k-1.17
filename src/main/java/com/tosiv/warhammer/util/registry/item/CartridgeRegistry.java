@@ -24,6 +24,7 @@ public final class CartridgeRegistry {
     public static final CartridgeItem C12MM;
     public static final CartridgeItem G12;
     public static final CartridgeItem G12G;
+    public static final CartridgeItem C19MM;
 
     public static void register() {
         ArrayList<String> sortedItems = new ArrayList<>(CARTRIDGES.keySet());
@@ -61,6 +62,9 @@ public final class CartridgeRegistry {
 
         G12G = new CartridgeItem(defaultCartridgeSettings, Caliber.GAU_12, 3, 100, 0.75F, true, true, 10);
         CARTRIDGES.put("g12g_shotgun_shell", G12G);
+
+        C19MM = new CartridgeItem(defaultCartridgeSettings, Caliber.CAL_19, 10, 300, 1, false, true, 1);
+        CARTRIDGES.put("c19mm_cartridge", C19MM);
 
     }
 

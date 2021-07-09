@@ -1,6 +1,7 @@
 package com.tosiv.warhammer.item;
 
 import com.tosiv.warhammer.util.enums.Caliber;
+import com.tosiv.warhammer.util.registry.ModSounds;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
@@ -34,7 +35,7 @@ public class MagazineItem extends Item implements ReloadableItem {
 
     @Override
     public void reload(PlayerEntity player, ItemStack stack) {
-        MinecraftClient.getInstance().getSoundManager().play(PositionedSoundInstance.master(SoundEvents.BLOCK_DISPENSER_LAUNCH, 1F, 1F));
+        MinecraftClient.getInstance().getSoundManager().play(PositionedSoundInstance.master(ModSounds.RELOAD_EVENT, 1F, 1F));
         NbtCompound tag = stack.getOrCreateTag();
         NbtList cartridges;
         if (tag.contains("cartridges")) {

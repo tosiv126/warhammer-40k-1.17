@@ -16,6 +16,7 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.GeckoLib;
 
 public class Warhammer implements ModInitializer {
 
@@ -24,13 +25,10 @@ public class Warhammer implements ModInitializer {
     public static final ItemGroup GENERAL_GROUP = FabricItemGroupBuilder.create(
             new Identifier("warhammer", "general"))
             .icon(() -> new ItemStack(ModItems.NUTRIENT_PASTE)).build();
-    public static final ItemGroup WEAPON_GROUP = FabricItemGroupBuilder.create(
-            new Identifier("warhammer", "weapons"))
-            .icon(() -> new ItemStack(ModItems.WH_ICON)).build();
-    public static final ItemGroup AMMO_GROUP = FabricItemGroupBuilder.create(
-            new Identifier("warhammer", "ammo"))
-            .icon(() -> new ItemStack(ModItems.BULLET)).build();
 
+    public static Identifier MOD_ID(String path) {
+        return new Identifier(Warhammer.MOD_ID, path);
+    }
 
     @Override
     public void onInitialize() {
@@ -47,6 +45,8 @@ public class Warhammer implements ModInitializer {
         //GunScreenHandlerRegistry.register();
         //BlockRegistry.register();
         EntityRegistry.register();
+
+        GeckoLib.initialize();
     }
 
     private void registerPacketHandlers() {

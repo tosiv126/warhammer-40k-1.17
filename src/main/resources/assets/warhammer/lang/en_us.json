@@ -1,7 +1,6 @@
 {
   "itemGroup.warhammer.general": "Warhammer 40K",
-  "itemGroup.warhammer.weapons": "Weapons",
-  "itemGroup.warhammer.ammo": "Ammunition",
+  "itemGroup.warhammer.guns": "Weapons",
 
   "tooltip.warhammer.capacity": "§3[§bCapacity§3] ",
   "tooltip.warhammer.explodes": "§3[§bExplosive§3]",
@@ -17,6 +16,10 @@
   "item.warhammer.box_magazine": "Box Magazine",
   "item.warhammer.magazine": "Magazine",
   "item.warhammer.cartridge": "Cartridge",
+
+  "item.warhammer.bolt_pistol": "Bolt Pistol",
+  "item.warhammer.bolter": "Bolter",
+  "item.warhammer.autopistol": "Autopistol",
 
   "item.warhammer.nutrient_paste": "Nutrient Paste",
 
@@ -55,9 +58,6 @@
   "block.warhammer.necron_light_block": "Necron Light Block",
   "block.warhammer.necron_stairs" : "Necron Stairs",
   "block.warhammer.ork_block": "Ork Block",
-
-  "item.warhammer.bullet": "Bullet",
-  "item.warhammer.bolter_round": "Bolter Round",
 
   "block.warhammer.computer_block": "Computer Block",
   "block.warhammer.red_barrel": "Red Barrel",

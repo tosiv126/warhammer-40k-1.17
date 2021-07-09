@@ -40,12 +40,6 @@ public class ModItems {
     public static final Item PLASTEEL_INGOT = new Item(new Item.Settings()
             .group(Warhammer.GENERAL_GROUP)
             .rarity(Rarity.COMMON));
-    public static final Item BULLET = new Item(new Item.Settings()
-            .group(Warhammer.AMMO_GROUP)
-            .rarity(Rarity.COMMON));
-    public static final Item BOLTER_ROUND = new Item(new Item.Settings()
-            .group(Warhammer.AMMO_GROUP)
-            .rarity(Rarity.COMMON));
 
     //Drugs
     public static final SmokedItem LHO_STICK = new SmokedItem(new Item.Settings()
@@ -80,9 +74,6 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "plasteel_ingot"), PLASTEEL_INGOT);
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID,"plasteel_pickaxe"), PLASTEEL_PICKAXE);
-
-        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID,"bolter_round"), BOLTER_ROUND);
-        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID,"bullet"), BULLET);
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "lho_seeds"), LHO_SEEDS);
 

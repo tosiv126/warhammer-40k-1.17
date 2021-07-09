@@ -23,5 +23,10 @@
     "sounds": [
       "warhammer:boltreload"
     ]
+  },
+  "reload": {
+    "sounds": [
+      "warhammer:reload"
+    ]
   }
 }

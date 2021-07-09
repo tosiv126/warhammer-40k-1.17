@@ -166,7 +166,7 @@ public class GunItem extends Item implements ReloadableItem {
         NbtList cartridges = new NbtList();
         if (tag != null){
             cartridges = tag.getList("cartridges", NbtElement.COMPOUND_TYPE);
-            tooltip.add(new TranslatableText("tooltip.customizable_guns.capacity").append(new LiteralText("◖" + cartridges.size() + " | " + this.magazineCapacities + "◗")));
+            tooltip.add(new TranslatableText("tooltip.warhammer.capacity").append(new LiteralText("◖" + cartridges.size() + " | " + this.magazineCapacities + "◗")));
         } else {
             MutableText text = new LiteralText("[ ");
             int i = 0;
@@ -178,15 +178,15 @@ public class GunItem extends Item implements ReloadableItem {
                     text.append(" ]");
                 }
             }
-            tooltip.add(new TranslatableText("tooltip.customizable_guns.capacities").append(text));
+            tooltip.add(new TranslatableText("tooltip.warhammer.capacities").append(text));
         }
-        tooltip.add(new TranslatableText("tooltip.customizable_guns.caliber").append(new LiteralText(this.caliber.toString())));
+        tooltip.add(new TranslatableText("tooltip.warhammer.caliber").append(new LiteralText(this.caliber.toString())));
         if (Screen.hasShiftDown()) {
             for (int i = 0; i < cartridges.size(); ++i) {
                 tooltip.add(new LiteralText("⚫ " + cartridges.getCompound(i).getString("type")));
             }
         } else if (!cartridges.isEmpty()){
-            tooltip.add(new TranslatableText("tooltip.customizable_guns.shift_for_info"));
+            tooltip.add(new TranslatableText("tooltip.warhammer.shift_for_info"));
         }
         super.appendTooltip(stack, world, tooltip, context);
     }

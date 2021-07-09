@@ -8,7 +8,8 @@ public enum Caliber {
     CAL_9("9mm"),
     CAL_10("10mm"),
     CAL_12("12mm"),
-    GAU_12("12 gauge");
+    GAU_12("12 gauge"),
+    CAL_19("19mm");
 
     private final String name;
 

@@ -20,7 +20,7 @@ public class BulletEntityModel<T extends Entity> extends SinglePartEntityModel<T
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        modelPartData.addChild("main", ModelPartBuilder.create().uv(0, 0).cuboid(-2F, 0.0F, -2F, 4.0F, 4.0F, 4.0F), ModelTransform.NONE);
+        modelPartData.addChild("main", ModelPartBuilder.create().uv(0, 0).cuboid(-2F, 0.0F, -2F, 2.0F, 2.0F, 2.0F), ModelTransform.NONE);
         return TexturedModelData.of(modelData, 64, 32);
     }
 

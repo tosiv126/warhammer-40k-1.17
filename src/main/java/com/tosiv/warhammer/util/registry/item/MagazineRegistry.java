@@ -21,11 +21,16 @@ public final class MagazineRegistry {
     public static final MagazineItem C8MM_S6_MAGAZINE;
     public static final MagazineItem C8MM_S8_MAGAZINE;
     public static final MagazineItem C8MM_S12_MAGAZINE;
+
     public static final MagazineItem C9MM_S20_MAGAZINE;
+
     public static final MagazineItem C12MM_S8_MAGAZINE;
     public static final MagazineItem C12MM_S12_MAGAZINE;
     public static final MagazineItem G12_S8_BOX_MAGAZINE;
     public static final MagazineItem G12_S20_DRUM_MAGAZINE;
+
+    public static final MagazineItem BOLT_S12_MAGAZINE;
+    public static final MagazineItem BOLT_S24_MAGAZINE;
 
     public static void register() {
         ArrayList<String> sortedItems = new ArrayList<>(MAGAZINES.keySet());
@@ -63,6 +68,12 @@ public final class MagazineRegistry {
 
         G12_S20_DRUM_MAGAZINE = new DrumMagazineItem(defaultMagazineSettings, Caliber.GAU_12, 20);
         MAGAZINES.put("g12_s20_drum_magazine", G12_S20_DRUM_MAGAZINE);
+
+        BOLT_S12_MAGAZINE = new MagazineItem(defaultMagazineSettings, Caliber.CAL_19, 12);
+        MAGAZINES.put("bolt_s12_magazine", BOLT_S12_MAGAZINE);
+
+        BOLT_S24_MAGAZINE = new MagazineItem(defaultMagazineSettings, Caliber.CAL_19, 24);
+        MAGAZINES.put("bolt_s24_magazine", BOLT_S24_MAGAZINE);
 
     }
 
