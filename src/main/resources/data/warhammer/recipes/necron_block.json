@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#L#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:coal_block"
+        },
+        "L": {
+            "item": "minecraft:lime_dye"
+        }
+    },
+    "result": {
+        "item": "warhammer:necron_block",
+        "count": 8
+    }
+}

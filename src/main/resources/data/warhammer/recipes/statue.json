@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "###",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "warhammer:ferrocrete_block"
+        }
+    },
+    "result": {
+        "item": "warhammer:statue_one_block",
+        "count": 1
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "warhammer:raw_adamantium"
+    },
+    "title": {
+      "translate": "achievement.warhammer.RawAdamantium"
+    },
+    "description": {
+      "translate": "achievement.warhammer.RawAdamantium.desc"
+    }
+  },
+  "parent": "warhammer:main/smelt_plasteel",
+  "criteria": {
+    "smelt_plasteel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "warhammer:raw_adamantium"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -24,6 +24,16 @@
       "warhammer:boltreload"
     ]
   },
+  "9mmshoot": {
+    "sounds": [
+      "warhammer:9mmshoot"
+    ]
+  },
+  "19mmshoot": {
+    "sounds": [
+      "warhammer:19mmshoot"
+    ]
+  },
   "reload": {
     "sounds": [
       "warhammer:reload"

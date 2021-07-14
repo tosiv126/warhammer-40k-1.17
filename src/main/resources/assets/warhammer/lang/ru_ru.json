@@ -1,20 +1,32 @@
-{
+ { "itemGroup.warhammer.general": "Warhammer 40K",
+  "itemGroup.warhammer.weapons": "Оружие",
+  "itemGroup.warhammer.ammo": "Боеприпасы",
 
-  "item.warhammer.autopistol": "Автоматический пистолет",
-  "block.warhammer.weapons_table": "Таблица оружия",
-  "itemGroup.warhammer.general": "Warhammer 40K",
-  
+  "tooltip.warhammer.capacity": "§3[§bВместимость§3] ",
+  "tooltip.warhammer.explodes": "§3[§bВзрывчатый§3]",
+  "tooltip.warhammer.capacities": "§3[§bПринятые Емкости Магазина§3] ",
+  "tooltip.warhammer.caliber": "§3[§bКалибр§3] ",
+  "tooltip.warhammer.damage": "§3[§bУщерб§3] ",
+  "tooltip.warhammer.shift_for_info": "§5[§dУдерживайте нажатой клавишу SHIFT для отображения загруженных картриджей§5]",
+
+  "key.warhammer": "Перезагрузить",
+  "category.warhammer.warhammer": "Warhammer 40K",
+
+  "item.warhammer.drum_magazine": "Барабанный магазин",
+  "item.warhammer.box_magazine": "Коробчатый магазин",
+  "item.warhammer.magazine": "магазин",
+  "item.warhammer.cartridge": "Картридж",
 
   "item.warhammer.nutrient_paste": "Питательная Паста",
 
   "item.warhammer.raw_adamantium" : "Необработанный адамантий",
   "item.warhammer.raw_ceramite" : "Необработанный керамит",
-  "item.warhammer.raw_plasteel" : "Необработанная Пласталь",
+  "item.warhammer.raw_plasteel" : "Необработанная пласталь",
   "item.warhammer.adamantium_ingot" : "Слиток адамантия",
-  "item.warhammer.ceramite_ingot" : "Керамический Слиток",
+  "item.warhammer.ceramite_ingot" : "керамитовый слиток",
   "item.warhammer.plasteel_ingot" : "Слиток пластали",
 
-  "item.warhammer.plasteel_pickaxe" : "Пласталевая кирка",
+ "item.warhammer.plasteel_pickaxe" : "Пласталевая кирка",
 
   "block.warhammer.adamantium_ore_block" : "Адамантиевая руда",
   "block.warhammer.ceramite_ore_block" : "Керамическая руда",
@@ -31,18 +43,25 @@
   "block.warhammer.ferrocrete_green_slab": "Зелёная феррокритовая плита",
   "block.warhammer.ferrocrete_stairs": "Феррокритовая Лестница",
   "block.warhammer.ferrocrete_green_stairs": "Зелёная феррокритовая Лестница",
+  "block.warhammer.ferrocrete_decorated_block" : "Декорированный железобетон",
 
-  "item.warhammer.flak_helmet" : "Бронированный шлем",
-  "item.warhammer.flak_chest" : "Бронированный нагрудник",
-  "item.warhammer.flak_leggings" : "Бронированные штаны",
-  "item.warhammer.flak_boots" : "Бронированные ботинки",
+  "block.warhammer.plasteel_block": "Пластиловый блок",
+  "block.warhammer.ceramite_block": "Керамитовый блок",
+  "block.warhammer.adamantium_block": "Адамантиевый блок",
+ "block.warhammer.necron_block": "Блок Некронов",
+  "block.warhammer.necron_glyph_block": "Блок глифов Некрона",
+  "block.warhammer.necron_light_block": "Блок света Некрона",
+  "block.warhammer.necron_stairs" : "Некронная лестница",
+  "block.warhammer.ork_block": "Оркский блок",
 
-  "item.warhammer.valhallan_flak_helmet" : "Валгалла бронированный шлем",
-  "item.warhammer.valhallan_flak_chest" : "Валгалла бронированный нагрудник",
-  "item.warhammer.valhallan_flak_leggings" : "Валгалла бронированные штаны",
-  "item.warhammer.valhallan_flak_boots" : "Валгалла бронированные ботинки",
+  "item.warhammer.bullet": "Пуля",
+  "item.warhammer.bolter_round": "Округлый болтер",
+
+  "block.warhammer.computer_block": "Компьютерный блок",
+  "block.warhammer.red_barrel": "Красная Бочка",
 
   "warhammer.flak_armor.text" : "Экипировка Императорской гвардии",
+
 
   "achievement.warhammer.Root" : "Warhammer 40K",
   "achievement.warhammer.Root.desc" : "В Мрачной Тьме Далекого Будущего есть только Война.",
@@ -50,5 +69,6 @@
   "achievement.warhammer.PlasteelIngot.desc" : "выплавите кусок необработанной пластали",
   "achievement.warhammer.NutrientPaste" : "Считается ли Это едой?",
   "achievement.warhammer.NutrientPaste.desc" : "Приготовьте питательную пасту"
+
 
 }

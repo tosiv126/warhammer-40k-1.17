@@ -97,6 +97,12 @@ public class ModBlocks {
             .ticksRandomly()
             .strength(0.0f, 0.0f)
             .sounds(BlockSoundGroup.CROP));
+    public static final StatueOneBlock STATUE_ONE_BLOCK = new StatueOneBlock(FabricBlockSettings
+            .of(Material.STONE)
+            .breakByTool(FabricToolTags.PICKAXES,2)
+            .requiresTool()
+            .strength(3.0f, 20.0f)
+            .sounds(BlockSoundGroup.STONE));
 
     public static final Block FERROCRETE_GREEN_BLOCK = new Block(FabricBlockSettings.copy(ModBlocks.FERROCRETE_BLOCK));
     public static final Block FERROCRETE_SIDE_BLOCK = new FerrocreteSideBlock(FabricBlockSettings.copy(ModBlocks.FERROCRETE_BLOCK));
@@ -111,7 +117,6 @@ public class ModBlocks {
     public static final Block NECRON_GLYPH_BLOCK = new NecronGlyphBlock(FabricBlockSettings.copy(ModBlocks.NECRON_BLOCK));
     public static final Block ORK_BLOCK = new Block(FabricBlockSettings.copy(ModBlocks.PLASTEEL_BLOCK));
     public static final StairsBlock NECRON_STAIRS = new CustomStairsBlock(ModBlocks.NECRON_BLOCK.getDefaultState());
-
 
 
     public static void registerBlocks() {
@@ -131,6 +136,7 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_stairs"), FERROCRETE_STAIRS);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_green_stairs"), FERROCRETE_GREEN_STAIRS);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_decorated_block"), FERROCRETE_DECORATED_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "statue_one_block"), STATUE_ONE_BLOCK);
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "red_barrel"), RED_BARREL);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "computer_block"), COMPUTER_BLOCK);
@@ -176,6 +182,8 @@ public class ModBlocks {
                 new BlockItem(FERROCRETE_STAIRS, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_green_stairs"),
                 new BlockItem(FERROCRETE_GREEN_STAIRS, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "statue_one_block"),
+                new BlockItem(STATUE_ONE_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "red_barrel"),
                 new BlockItem(RED_BARREL, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "plasteel_block"),

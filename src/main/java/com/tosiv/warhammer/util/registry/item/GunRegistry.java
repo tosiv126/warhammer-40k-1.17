@@ -20,9 +20,11 @@ public final class GunRegistry {
     public static final GunItem BOLT_PISTOL;
     public static final GunItem BOLTER;
     public static final GunItem AUTOPISTOL;
+    /*
     public static final GunItem AA12;
     public static final GunItem RIFLE;
     public static final GunItem AWP;
+     */
 
     public static void register() {
         ArrayList<String> sortedItems = new ArrayList<>(GUNS.keySet());
@@ -39,20 +41,23 @@ public final class GunRegistry {
 
         BOLT_PISTOL = new GunItem(defaultGunSettings, Caliber.CAL_19, 10, false, 5, 1, 0.8F, 1F);
         BOLT_PISTOL.addMagazineCapacity(12);
-        BOLT_PISTOL.setSound(GunItem.SoundType.SHOOT, ModSounds.BOLTER_PISTOL_SHOOT_EVENT);
+        BOLT_PISTOL.setSound(GunItem.SoundType.SHOOT, ModSounds.C19MM_SHOOT_EVENT);
         BOLT_PISTOL.setSound(GunItem.SoundType.RELOAD, ModSounds.BOLT_RELOAD_EVENT);
         GUNS.put("bolt_pistol", BOLT_PISTOL);
 
         BOLTER = new GunItem(defaultGunSettings, Caliber.CAL_19, 20, true, 5, 1, 0.8F, 1F);
         BOLTER.addMagazineCapacity(24);
-        BOLTER.setSound(GunItem.SoundType.SHOOT, ModSounds.BOLTER_SHOOT_EVENT);
+        BOLTER.setSound(GunItem.SoundType.SHOOT, ModSounds.C19MM_SHOOT_EVENT);
         BOLTER.setSound(GunItem.SoundType.RELOAD, ModSounds.BOLT_RELOAD_EVENT);
         GUNS.put("bolter", BOLTER);
 
         AUTOPISTOL = new GunItem(defaultGunSettings, Caliber.CAL_9, 6, true, 2, 2, 0.8F, 1F);
         AUTOPISTOL.addMagazineCapacity(20);
+        AUTOPISTOL.setSound(GunItem.SoundType.SHOOT, ModSounds.C9MM_SHOOT_EVENT);
+        AUTOPISTOL.setSound(GunItem.SoundType.RELOAD, ModSounds.RELOAD_EVENT);
         GUNS.put("autopistol", AUTOPISTOL);
 
+        /*
         RIFLE = new GunItem(defaultGunSettings, Caliber.CAL_12, 6, true, 6,2, 1F, 2.5F);
         RIFLE.addMagazineCapacity(12);
         GUNS.put("rifle", RIFLE);
@@ -66,6 +71,7 @@ public final class GunRegistry {
         AA12.addMagazineCapacity(20);
         AA12.addMagazineCapacity(32);
         GUNS.put("aa12", AA12);
+        */
 
     }
 

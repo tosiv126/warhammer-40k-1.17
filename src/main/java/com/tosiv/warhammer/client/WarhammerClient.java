@@ -9,9 +9,6 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.sound.PositionedSoundInstance;
-import net.minecraft.sound.SoundEvents;
 
 public class WarhammerClient implements ClientModInitializer {
 
@@ -26,6 +23,7 @@ public class WarhammerClient implements ClientModInitializer {
         ClientEntityRendererRegistry.register();
         //GunScreenRegistry.register();
         CustomEntityModelLayers.register();
+
     }
 
     private void registerEventHandlers() {

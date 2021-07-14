@@ -1,6 +1,7 @@
 {
   "itemGroup.warhammer.general": "Warhammer 40K",
   "itemGroup.warhammer.guns": "Weapons",
+  "itemGroup.warhammer.wip": "WIP",
 
   "tooltip.warhammer.capacity": "§3[§bCapacity§3] ",
   "tooltip.warhammer.explodes": "§3[§bExplosive§3]",
@@ -16,6 +17,7 @@
   "item.warhammer.box_magazine": "Box Magazine",
   "item.warhammer.magazine": "Magazine",
   "item.warhammer.cartridge": "Cartridge",
+  "item.warhammer.ammo": "Ammo",
 
   "item.warhammer.bolt_pistol": "Bolt Pistol",
   "item.warhammer.bolter": "Bolter",
@@ -49,6 +51,8 @@
   "block.warhammer.ferrocrete_green_stairs": "Green Ferrocrete Stairs",
   "block.warhammer.ferrocrete_decorated_block" : "Decorated Ferrocrete",
 
+  "block.warhammer.statue_one_block" : "Saluting Statue",
+
   "block.warhammer.plasteel_block": "Plasteel Block",
   "block.warhammer.ceramite_block": "Ceramite Block",
   "block.warhammer.adamantium_block": "Adamantium Block",
@@ -69,6 +73,7 @@
   "achievement.warhammer.PlasteelIngot" : "A New Alloy",
   "achievement.warhammer.PlasteelIngot.desc" : "Smelt a piece of raw plasteel",
   "achievement.warhammer.NutrientPaste" : "Does This Count as Food?",
-  "achievement.warhammer.NutrientPaste.desc" : "Craft a Nutrient Paste Meal"
-
+  "achievement.warhammer.NutrientPaste.desc" : "Craft a Nutrient Paste Meal",
+  "achievement.warhammer.RawAdamantium" : "Fit for the Emperor's Finest",
+  "achievement.warhammer.RawAdamantium.desc" : "Find a piece of adamantium"
 }

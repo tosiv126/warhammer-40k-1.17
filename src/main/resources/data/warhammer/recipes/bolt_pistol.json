@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "www",
+        "w  "
+    ],
+    "key": {
+        "w": {
+            "item": "warhammer:plasteel_ingot"
+        }
+    },
+    "result": {
+        "item": "warhammer:bolt_pistol",
+        "count": 1
+    }
+}

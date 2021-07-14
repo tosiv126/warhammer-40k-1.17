@@ -43,7 +43,7 @@ public class ModItems {
 
     //Drugs
     public static final SmokedItem LHO_STICK = new SmokedItem(new Item.Settings()
-            .group(Warhammer.GENERAL_GROUP)
+            .group(Warhammer.WIP_GROUP)
             .food(new FoodComponent.Builder()
                     .hunger(0)
                     .saturationModifier(4.0f)
@@ -51,10 +51,10 @@ public class ModItems {
                     .build()));
 
     //Seeds
-    public static final LhoSeedsItem LHO_SEEDS = new LhoSeedsItem(ModBlocks.LHO_CROP, (new Item.Settings().group(Warhammer.GENERAL_GROUP)));
+    public static final LhoSeedsItem LHO_SEEDS = new LhoSeedsItem(ModBlocks.LHO_CROP, (new Item.Settings().group(Warhammer.WIP_GROUP)));
 
     //Crop Items
-    public static final LhoCropItem LHO_LEAF = new LhoCropItem((new Item.Settings().group(Warhammer.GENERAL_GROUP)));
+    public static final LhoCropItem LHO_LEAF = new LhoCropItem((new Item.Settings().group(Warhammer.WIP_GROUP)));
 
     //Tools
     public static ToolItem PLASTEEL_PICKAXE = new CustomPickaxeItem(PlasteelToolMaterial.INSTANCE, 1, -2.8f, new Item.Settings().group(Warhammer.GENERAL_GROUP));

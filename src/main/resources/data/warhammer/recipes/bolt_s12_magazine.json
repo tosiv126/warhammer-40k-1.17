@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ww",
+        "ww"
+    ],
+    "key": {
+        "w": {
+            "item": "warhammer:plasteel_ingot"
+        }
+    },
+    "result": {
+        "item": "warhammer:bolt_s12_magazine",
+        "count": 1
+    }
+}

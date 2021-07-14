@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "warhammer:necron_block"
+        }
+    },
+    "result": {
+        "item": "warhammer:necron_stairs",
+        "count": 4
+    }
+}

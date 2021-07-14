@@ -16,14 +16,16 @@ public final class CartridgeRegistry {
 
     private static final HashMap<String, Item> CARTRIDGES = new HashMap<>();
 
+    /*
     public static final CartridgeItem C4MM;
     public static final CartridgeItem C6MM;
     public static final CartridgeItem C8MM;
-    public static final CartridgeItem C9MM;
     public static final CartridgeItem C10MM;
     public static final CartridgeItem C12MM;
     public static final CartridgeItem G12;
     public static final CartridgeItem G12G;
+    */
+    public static final CartridgeItem C9MM;
     public static final CartridgeItem C19MM;
 
     public static void register() {
@@ -39,6 +41,8 @@ public final class CartridgeRegistry {
 
         FabricItemSettings defaultCartridgeSettings = new FabricItemSettings().group(GunItemGroups.GUNS);
 
+        /*
+
         C4MM = new CartridgeItem(defaultCartridgeSettings, Caliber.CAL_4, 3, 200, 1, false, false, 1);
         CARTRIDGES.put("c4mm_cartridge", C4MM);
 
@@ -47,9 +51,6 @@ public final class CartridgeRegistry {
 
         C8MM = new CartridgeItem(defaultCartridgeSettings, Caliber.CAL_8, 7, 200, 1, false, false, 1);
         CARTRIDGES.put("c8mm_cartridge", C8MM);
-
-        C9MM = new CartridgeItem(defaultCartridgeSettings, Caliber.CAL_9, 7, 200, 1, false, false, 1);
-        CARTRIDGES.put("c9mm_cartridge", C9MM);
 
         C10MM = new CartridgeItem(defaultCartridgeSettings, Caliber.CAL_10, 9, 200, 1, false, false, 1);
         CARTRIDGES.put("c10mm_cartridge", C10MM);
@@ -63,7 +64,12 @@ public final class CartridgeRegistry {
         G12G = new CartridgeItem(defaultCartridgeSettings, Caliber.GAU_12, 3, 100, 0.75F, true, true, 10);
         CARTRIDGES.put("g12g_shotgun_shell", G12G);
 
-        C19MM = new CartridgeItem(defaultCartridgeSettings, Caliber.CAL_19, 10, 300, 1, false, true, 1);
+        */
+
+        C9MM = new CartridgeItem(defaultCartridgeSettings, Caliber.CAL_9, 7, 200, 1, false, false, 1);
+        CARTRIDGES.put("c9mm_cartridge", C9MM);
+
+        C19MM = new CartridgeItem(defaultCartridgeSettings, Caliber.CAL_19, 10, 300, 1, false, false, 1);
         CARTRIDGES.put("c19mm_cartridge", C19MM);
 
     }

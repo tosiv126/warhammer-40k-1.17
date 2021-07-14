@@ -1,7 +1,7 @@
 package com.tosiv.warhammer.util.registry;
 
-import com.tosiv.warhammer.util.Utils;
 import com.tosiv.warhammer.entity.BulletEntity;
+import com.tosiv.warhammer.util.Utils;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;

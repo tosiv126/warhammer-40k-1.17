@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "w",
+        "G",
+        "c"
+    ],
+    "key": {
+        "w": {
+            "item": "warhammer:plasteel_ingot"
+        },
+        "G": {
+            "item": "minecraft:gunpowder"
+        },
+        "c": {
+            "item": "minecraft:copper_ingot"
+        }
+    },
+    "result": {
+        "item": "warhammer:c9mm_cartridge",
+        "count": 16
+    }
+}
