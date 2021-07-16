@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#w#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:black_concrete"
+    },
+    "w": {
+      "item": "warhammer:plasteel_ingot"
+    }
+  },
+  "result": {
+    "item": "warhammer:ferrocrete_green_block",
+    "count": 16
+  }
+}

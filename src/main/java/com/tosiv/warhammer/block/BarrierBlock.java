@@ -13,8 +13,8 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 
-public class FerrocreteSideGreenBlock extends HorizontalFacingBlock {
-    public FerrocreteSideGreenBlock(Settings settings) {
+public class BarrierBlock extends HorizontalFacingBlock {
+    public BarrierBlock(Settings settings) {
         super(settings);
         setDefaultState(this.stateManager.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
     }
@@ -29,13 +29,13 @@ public class FerrocreteSideGreenBlock extends HorizontalFacingBlock {
         Direction dir = state.get(FACING);
         switch(dir) {
             case NORTH:
-                return VoxelShapes.cuboid(0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.5f);
+                return VoxelShapes.cuboid(0.0f, 0.0f, 0.1875f, 1.0f, 1.0f, 0.8125f);
             case SOUTH:
-                return VoxelShapes.cuboid(0.0f, 0.0f, 0.5f, 1.0f, 1.0f, 1.0f);
+                return VoxelShapes.cuboid(0.0f, 0.0f, 0.1875f, 1.0f, 1.0f, 0.8125f);
             case EAST:
-                return VoxelShapes.cuboid(0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+                return VoxelShapes.cuboid(0.1875f, 0.0f, 0.0f, 0.8125f, 1.0f, 1.0f);
             case WEST:
-                return VoxelShapes.cuboid(0.0f, 0.0f, 0.0f, 0.5f, 1.0f, 1.0f);
+                return VoxelShapes.cuboid(0.1875f, 0.0f, 0.0f, 0.8125f, 1.0f, 1.0f);
             default:
                 return VoxelShapes.fullCube();
         }

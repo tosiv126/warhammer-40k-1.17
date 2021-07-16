@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "warhammer:block/ferrocrete_side_block" },
-    "facing=east":  { "model": "warhammer:block/ferrocrete_side_block", "y":  90},
-    "facing=south": { "model": "warhammer:block/ferrocrete_side_block", "y": 180 },
-    "facing=west":  { "model": "warhammer:block/ferrocrete_side_block", "y": 270 }
-  }
-}

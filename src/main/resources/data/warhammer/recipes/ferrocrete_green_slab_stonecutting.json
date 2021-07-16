@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "tag": "warhammer:ferrocretes_slabs"
+    },
+    "result": "warhammer:ferrocrete_green_slab",
+    "count": 1
+}

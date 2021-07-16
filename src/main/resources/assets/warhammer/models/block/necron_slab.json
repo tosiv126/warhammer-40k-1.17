@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "warhammer:blocks/necron_block",
+    "top": "warhammer:blocks/necron_block",
+    "side": "warhammer:blocks/necron_block"
+  }
+}

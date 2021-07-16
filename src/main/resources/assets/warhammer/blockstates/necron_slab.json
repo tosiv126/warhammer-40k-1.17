@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "warhammer:block/necron_slab"
+    },
+    "type=double": {
+      "model": "warhammer:block/necron_block"
+    },
+    "type=top": {
+      "model": "warhammer:block/necron_slab_top"
+    }
+  }
+}

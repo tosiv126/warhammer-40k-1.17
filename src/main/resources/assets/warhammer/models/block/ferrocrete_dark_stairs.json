@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "warhammer:blocks/ferrocrete_dark_block",
+    "top": "warhammer:blocks/ferrocrete_dark_block",
+    "side": "warhammer:blocks/ferrocrete_dark_block"
+  }
+}

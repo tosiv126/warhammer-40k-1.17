@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "tag": "warhammer:necron_blocks"
+    },
+    "result": "warhammer:necron_glyph_block",
+    "count": 1
+}

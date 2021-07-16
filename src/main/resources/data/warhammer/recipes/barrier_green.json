@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        " # ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "warhammer:ferrocrete_green_block"
+        }
+    },
+    "result": {
+        "item": "warhammer:barrier_green_block",
+        "count": 4
+    }
+}

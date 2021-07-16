@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "warhammer:barrier_block",
+    "warhammer:barrier_green_block",
+    "warhammer:barrier_dark_block"
+  ]
+}

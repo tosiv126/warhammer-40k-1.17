@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "tag": "warhammer:barriers"
+    },
+    "result": "warhammer:barrier_dark_block",
+    "count": 1
+}

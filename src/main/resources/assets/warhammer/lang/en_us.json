@@ -43,15 +43,21 @@
 
   "block.warhammer.ferrocrete_block": "Ferrocrete",
   "block.warhammer.ferrocrete_green_block": "Green Ferrocrete",
-  "block.warhammer.ferrocrete_side_block": "Ferrocrete Side Slab",
-  "block.warhammer.ferrocrete_side_green_block": "Green Ferrocrete Side Slab",
+  "block.warhammer.ferrocrete_dark_block": "Dark Ferrocrete",
   "block.warhammer.ferrocrete_slab": "Ferrocrete Slab",
   "block.warhammer.ferrocrete_green_slab": "Green Ferrocrete Slab",
+  "block.warhammer.ferrocrete_dark_slab": "Dark Ferrocrete Slab",
   "block.warhammer.ferrocrete_stairs": "Ferrocrete Stairs",
   "block.warhammer.ferrocrete_green_stairs": "Green Ferrocrete Stairs",
+  "block.warhammer.ferrocrete_dark_stairs": "Dark Ferrocrete Stairs",
   "block.warhammer.ferrocrete_decorated_block" : "Decorated Ferrocrete",
 
+  "block.warhammer.barrier_block" : "Barrier",
+  "block.warhammer.barrier_green_block" : "Green Barrier",
+  "block.warhammer.barrier_dark_block" : "Dark Barrier",
+
   "block.warhammer.statue_one_block" : "Saluting Statue",
+  "block.warhammer.statue_two_block" : "Praying Statue",
 
   "block.warhammer.plasteel_block": "Plasteel Block",
   "block.warhammer.ceramite_block": "Ceramite Block",
@@ -61,6 +67,7 @@
   "block.warhammer.necron_glyph_block": "Necron Glyph Block",
   "block.warhammer.necron_light_block": "Necron Light Block",
   "block.warhammer.necron_stairs" : "Necron Stairs",
+  "block.warhammer.necron_slab" : "Necron Slab",
   "block.warhammer.ork_block": "Ork Block",
 
   "block.warhammer.computer_block": "Computer Block",

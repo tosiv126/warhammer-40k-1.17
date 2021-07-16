@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "tag": "warhammer:ferrocretes_stairs"
+    },
+    "result": "warhammer:ferrocrete_dark_stairs",
+    "count": 1
+}
