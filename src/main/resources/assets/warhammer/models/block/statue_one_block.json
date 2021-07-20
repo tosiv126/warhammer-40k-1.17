@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "warhammer:blocks/statue_one_block",
-		"particle": "warhammer:blocks/statue_one_block"
+		"0": "warhammer:blocks/statue",
+		"particle": "warhammer:blocks/statue"
 	},
 	"elements": [
 		{

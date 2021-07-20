@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#w#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:yellow_terracotta"
+        },
+        "w": {
+            "item": "warhammer:plasteel_ingot"
+        }
+    },
+    "result": {
+        "item": "warhammer:tau_block",
+        "count": 16
+    }
+}

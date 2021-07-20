@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "warhammer:blocks/tau_block",
+    "top": "warhammer:blocks/tau_block",
+    "side": "warhammer:blocks/tau_block"
+  }
+}

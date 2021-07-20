@@ -44,20 +44,34 @@
   "block.warhammer.ferrocrete_block": "Ferrocrete",
   "block.warhammer.ferrocrete_green_block": "Green Ferrocrete",
   "block.warhammer.ferrocrete_dark_block": "Dark Ferrocrete",
+  "block.warhammer.ferrocrete_tan_block": "Tan Ferrocrete",
+
   "block.warhammer.ferrocrete_slab": "Ferrocrete Slab",
   "block.warhammer.ferrocrete_green_slab": "Green Ferrocrete Slab",
   "block.warhammer.ferrocrete_dark_slab": "Dark Ferrocrete Slab",
+  "block.warhammer.ferrocrete_tan_slab": "Tan Ferrocrete Slab",
+
   "block.warhammer.ferrocrete_stairs": "Ferrocrete Stairs",
   "block.warhammer.ferrocrete_green_stairs": "Green Ferrocrete Stairs",
   "block.warhammer.ferrocrete_dark_stairs": "Dark Ferrocrete Stairs",
+  "block.warhammer.ferrocrete_tan_stairs": "Tan Ferrocrete Stairs",
+
   "block.warhammer.ferrocrete_decorated_block" : "Decorated Ferrocrete",
 
   "block.warhammer.barrier_block" : "Barrier",
   "block.warhammer.barrier_green_block" : "Green Barrier",
   "block.warhammer.barrier_dark_block" : "Dark Barrier",
+  "block.warhammer.barrier_tan_block" : "Tan Barrier",
 
   "block.warhammer.statue_one_block" : "Saluting Statue",
   "block.warhammer.statue_two_block" : "Praying Statue",
+  "block.warhammer.statue_three_block" : "Warrior Statue",
+  "block.warhammer.statue_one_green_block" : "Saluting Statue",
+  "block.warhammer.statue_two_green_block" : "Praying Statue",
+  "block.warhammer.statue_three_green_block" : "Warrior Statue",
+  "block.warhammer.statue_one_dark_block" : "Saluting Statue",
+  "block.warhammer.statue_two_dark_block" : "Praying Statue",
+  "block.warhammer.statue_three_dark_block" : "Warrior Statue",
 
   "block.warhammer.plasteel_block": "Plasteel Block",
   "block.warhammer.ceramite_block": "Ceramite Block",
@@ -68,10 +82,16 @@
   "block.warhammer.necron_light_block": "Necron Light Block",
   "block.warhammer.necron_stairs" : "Necron Stairs",
   "block.warhammer.necron_slab" : "Necron Slab",
+  "block.warhammer.tau_block": "Tau Block",
+  "block.warhammer.tau_decorated_block": "Decorated Tau Block",
+  "block.warhammer.tau_light_block": "Tau Light Block",
+  "block.warhammer.tau_stairs" : "Tau Stairs",
+  "block.warhammer.tau_slab" : "Tau Slab",
   "block.warhammer.ork_block": "Ork Block",
 
   "block.warhammer.computer_block": "Computer Block",
   "block.warhammer.red_barrel": "Red Barrel",
+  "block.warhammer.symbol_chaos_block": "Chaos Symbol",
 
   "warhammer.flak_armor.text" : "Equipment of the Imperial Guard",
 

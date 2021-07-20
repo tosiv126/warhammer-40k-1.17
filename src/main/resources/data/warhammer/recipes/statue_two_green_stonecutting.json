@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "tag": "warhammer:statues"
+    },
+    "result": "warhammer:statue_two_green_block",
+    "count": 1
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "warhammer:tau_block"
+        }
+    },
+    "result": {
+        "item": "warhammer:tau_stairs",
+        "count": 4
+    }
+}

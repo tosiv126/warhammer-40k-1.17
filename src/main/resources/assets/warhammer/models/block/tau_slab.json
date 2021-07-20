@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "warhammer:blocks/tau_block",
+    "top": "warhammer:blocks/tau_block",
+    "side": "warhammer:blocks/tau_block"
+  }
+}

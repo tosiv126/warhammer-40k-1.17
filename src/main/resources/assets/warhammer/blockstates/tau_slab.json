@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "warhammer:block/tau_slab"
+    },
+    "type=double": {
+      "model": "warhammer:block/tau_block"
+    },
+    "type=top": {
+      "model": "warhammer:block/tau_slab_top"
+    }
+  }
+}

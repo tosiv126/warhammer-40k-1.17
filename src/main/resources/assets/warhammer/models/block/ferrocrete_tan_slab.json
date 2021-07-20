@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "warhammer:blocks/ferrocrete_tan_block",
+    "top": "warhammer:blocks/ferrocrete_tan_block",
+    "side": "warhammer:blocks/ferrocrete_tan_block"
+  }
+}
