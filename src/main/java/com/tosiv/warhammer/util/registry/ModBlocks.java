@@ -183,6 +183,21 @@ public class ModBlocks {
             .sounds(BlockSoundGroup.METAL)
             .luminance(15));
 
+    public static final Block ELDAR_BLOCK = new Block(FabricBlockSettings
+            .of(Material.AMETHYST)
+            .breakByTool(FabricToolTags.PICKAXES,2)
+            .requiresTool()
+            .strength(3.0f, 20.0f)
+            .sounds(BlockSoundGroup.BONE)
+            .luminance(5));
+    public static final Block ELDAR_LIGHT_BLOCK = new Block(FabricBlockSettings
+            .of(Material.AMETHYST)
+            .breakByTool(FabricToolTags.PICKAXES,2)
+            .requiresTool()
+            .strength(3.0f, 20.0f)
+            .sounds(BlockSoundGroup.BONE)
+            .luminance(15));
+
     public static final Block FERROCRETE_GREEN_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final Block FERROCRETE_TAN_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final SlabBlock FERROCRETE_SLAB = new SlabBlock(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
@@ -207,6 +222,9 @@ public class ModBlocks {
     public static final Block TAU_DECORATED_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.TAU_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final StairsBlock TAU_STAIRS = new CustomStairsBlock(ModBlocks.TAU_BLOCK.getDefaultState(), FabricBlockSettings.copyOf((ModBlocks.TAU_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final SlabBlock TAU_SLAB = new SlabBlock(FabricBlockSettings.copyOf((ModBlocks.TAU_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block ELDAR_DECORATED_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.ELDAR_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final StairsBlock ELDAR_STAIRS = new CustomStairsBlock(ModBlocks.ELDAR_BLOCK.getDefaultState(), FabricBlockSettings.copyOf((ModBlocks.ELDAR_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final SlabBlock ELDAR_SLAB = new SlabBlock(FabricBlockSettings.copyOf((ModBlocks.ELDAR_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
 
 
     public static void registerBlocks() {
@@ -268,6 +286,12 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "tau_stairs"), TAU_STAIRS);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "tau_slab"), TAU_SLAB);
 
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "eldar_block"), ELDAR_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "eldar_decorated_block"), ELDAR_DECORATED_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "eldar_light_block"), ELDAR_LIGHT_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "eldar_stairs"), ELDAR_STAIRS);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "eldar_slab"), ELDAR_SLAB);
+
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "plasteel_block"), PLASTEEL_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ceramite_block"), CERAMITE_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "adamantium_block"), ADAMANTIUM_BLOCK);
@@ -286,8 +310,8 @@ public class ModBlocks {
                 new BlockItem(NETHER_CERAMITE_ORE_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "end_ceramite_ore_block"),
                 new BlockItem(END_CERAMITE_ORE_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
-        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_block"),
 
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_block"),
                 new BlockItem(FERROCRETE_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_green_block"),
                 new BlockItem(FERROCRETE_GREEN_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
@@ -295,6 +319,9 @@ public class ModBlocks {
                 new BlockItem(FERROCRETE_DARK_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_block"),
                 new BlockItem(FERROCRETE_TAN_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_decorated_block"),
+                new BlockItem(FERROCRETE_DECORATED_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_slab"),
                 new BlockItem(FERROCRETE_SLAB, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
@@ -347,8 +374,6 @@ public class ModBlocks {
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "plasteel_block"),
                 new BlockItem(PLASTEEL_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
-        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_decorated_block"),
-                new BlockItem(FERROCRETE_DECORATED_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ceramite_block"),
                 new BlockItem(CERAMITE_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "adamantium_block"),
@@ -377,6 +402,17 @@ public class ModBlocks {
                 new BlockItem(TAU_STAIRS, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "tau_slab"),
                 new BlockItem(TAU_SLAB, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "eldar_block"),
+                new BlockItem(ELDAR_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "eldar_decorated_block"),
+                new BlockItem(ELDAR_DECORATED_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "eldar_light_block"),
+                new BlockItem(ELDAR_LIGHT_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "eldar_stairs"),
+                new BlockItem(ELDAR_STAIRS, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "eldar_slab"),
+                new BlockItem(ELDAR_SLAB, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ork_block"),
                 new BlockItem(ORK_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));

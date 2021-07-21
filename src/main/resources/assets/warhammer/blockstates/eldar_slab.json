@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "warhammer:block/eldar_slab"
+    },
+    "type=double": {
+      "model": "warhammer:block/eldar_block"
+    },
+    "type=top": {
+      "model": "warhammer:block/eldar_slab_top"
+    }
+  }
+}

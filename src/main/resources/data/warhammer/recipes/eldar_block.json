@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#L#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:bone_block"
+        },
+        "L": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "warhammer:eldar_block",
+        "count": 8
+    }
+}

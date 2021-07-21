@@ -88,6 +88,12 @@
   "block.warhammer.tau_stairs" : "Tau Stairs",
   "block.warhammer.tau_slab" : "Tau Slab",
   "block.warhammer.ork_block": "Ork Block",
+  "block.warhammer.eldar_block": "Eldar Block",
+  "block.warhammer.eldar_decorated_block": "Decorated Eldar Block",
+  "block.warhammer.eldar_light_block": "Eldar Light Block",
+  "block.warhammer.eldar_stairs" : "Eldar Stairs",
+  "block.warhammer.eldar_slab" : "Eldar Slab",
+
 
   "block.warhammer.computer_block": "Computer Block",
   "block.warhammer.red_barrel": "Red Barrel",

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#G",
+        "G#"
+    ],
+    "key": {
+        "#": {
+            "item": "warhammer:eldar_block"
+        },
+        "G": {
+            "item": "minecraft:glowstone"
+        }
+    },
+    "result": {
+        "item": "warhammer:eldar_light_block",
+        "count": 4
+    }
+}

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "warhammer:block/eldar_block" }
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "tag": "warhammer:eldar_blocks"
+    },
+    "result": "warhammer:eldar_block",
+    "count": 1
+}
