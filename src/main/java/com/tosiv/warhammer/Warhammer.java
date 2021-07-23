@@ -2,10 +2,7 @@ package com.tosiv.warhammer;
 
 import com.tosiv.warhammer.item.ReloadableItem;
 import com.tosiv.warhammer.util.Utils;
-import com.tosiv.warhammer.util.registry.EntityRegistry;
-import com.tosiv.warhammer.util.registry.ModBlocks;
-import com.tosiv.warhammer.util.registry.ModItems;
-import com.tosiv.warhammer.util.registry.ModSounds;
+import com.tosiv.warhammer.util.registry.*;
 import com.tosiv.warhammer.util.registry.item.CartridgeRegistry;
 import com.tosiv.warhammer.util.registry.item.GunRegistry;
 import com.tosiv.warhammer.util.registry.item.MagazineRegistry;
@@ -47,6 +44,7 @@ public class Warhammer implements ModInitializer {
         //GunScreenHandlerRegistry.register();
         //BlockRegistry.register();
         EntityRegistry.register();
+        SpawnRegistry.register();
 
     }
 
