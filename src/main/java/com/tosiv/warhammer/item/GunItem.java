@@ -5,7 +5,6 @@ import com.tosiv.warhammer.util.enums.Caliber;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -134,7 +133,7 @@ public class GunItem extends Item implements ReloadableItem {
 
     @Override
     public void reload(PlayerEntity player, ItemStack stack) {
-        MinecraftClient.getInstance().getSoundManager().play(PositionedSoundInstance.master(sounds.get(SoundType.RELOAD), 1F, 1F));
+        player.world.playSound(player, player.getBlockPos(), sounds.get(SoundType.RELOAD), SoundCategory.PLAYERS, 1F, 1F);
         NbtCompound tag = stack.getOrCreateTag();
         if (tag.contains("magazine")) {
             ItemStack magazineStack = new ItemStack(Registry.ITEM.get(new Identifier(tag.getString("magazine"))));
