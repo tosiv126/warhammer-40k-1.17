@@ -2,17 +2,15 @@ package com.tosiv.warhammer.item;
 
 import com.tosiv.warhammer.util.enums.Caliber;
 import com.tosiv.warhammer.util.registry.ModSounds;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtList;
-import net.minecraft.sound.SoundEvents;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -35,7 +33,7 @@ public class MagazineItem extends Item implements ReloadableItem {
 
     @Override
     public void reload(PlayerEntity player, ItemStack stack) {
-        MinecraftClient.getInstance().getSoundManager().play(PositionedSoundInstance.master(ModSounds.RELOAD_EVENT, 1F, 1F));
+        player.world.playSound(player, player.getBlockPos(), ModSounds.RELOAD_EVENT, SoundCategory.PLAYERS, 1F, 1F);
         NbtCompound tag = stack.getOrCreateTag();
         NbtList cartridges;
         if (tag.contains("cartridges")) {
