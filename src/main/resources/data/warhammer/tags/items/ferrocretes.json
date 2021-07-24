@@ -4,6 +4,18 @@
     "warhammer:ferrocrete_block",
     "warhammer:ferrocrete_green_block",
     "warhammer:ferrocrete_dark_block",
-    "warhammer:ferrocrete_tan_block"
+    "warhammer:ferrocrete_tan_block",
+    "warhammer:ferrocrete_decorated_block",
+    "warhammer:ferrocrete_green_decorated_block",
+    "warhammer:ferrocrete_dark_decorated_block",
+    "warhammer:ferrocrete_tan_decorated_block",
+    "warhammer:ferrocrete_decorated_2_block",
+    "warhammer:ferrocrete_green_decorated_2_block",
+    "warhammer:ferrocrete_dark_decorated_2_block",
+    "warhammer:ferrocrete_tan_decorated_2_block",
+    "warhammer:ferrocrete_decorated_3_block",
+    "warhammer:ferrocrete_green_decorated_3_block",
+    "warhammer:ferrocrete_dark_decorated_3_block",
+    "warhammer:ferrocrete_tan_decorated_3_block"
   ]
 }

@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "tag": "warhammer:ferrocretes"
+    },
+    "result": "warhammer:ferrocrete_green_decorated_3_block",
+    "count": 1
+}

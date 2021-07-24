@@ -56,7 +56,20 @@
   "block.warhammer.ferrocrete_dark_stairs": "Dark Ferrocrete Stairs",
   "block.warhammer.ferrocrete_tan_stairs": "Tan Ferrocrete Stairs",
 
-  "block.warhammer.ferrocrete_decorated_block" : "Decorated Ferrocrete",
+  "block.warhammer.ferrocrete_decorated_block" : "Aquilla Ferrocrete",
+  "block.warhammer.ferrocrete_green_decorated_block" : "Aquilla Ferrocrete",
+  "block.warhammer.ferrocrete_dark_decorated_block" : "Aquilla Ferrocrete",
+  "block.warhammer.ferrocrete_tan_decorated_block" : "Aquilla Ferrocrete",
+
+  "block.warhammer.ferrocrete_decorated_2_block" : "Ultramarine Ferrocrete",
+  "block.warhammer.ferrocrete_green_decorated_2_block" : "Ultramarine Ferrocrete",
+  "block.warhammer.ferrocrete_dark_decorated_2_block" : "Ultramarine Ferrocrete",
+  "block.warhammer.ferrocrete_tan_decorated_2_block" : "Ultramarine Ferrocrete",
+
+  "block.warhammer.ferrocrete_decorated_3_block" : "Chaotic Ferrocrete",
+  "block.warhammer.ferrocrete_green_decorated_3_block" : "Chaotic Ferrocrete",
+  "block.warhammer.ferrocrete_dark_decorated_3_block" : "Chaotic Ferrocrete",
+  "block.warhammer.ferrocrete_tan_decorated_3_block" : "Chaotic Ferrocrete",
 
   "block.warhammer.barrier_block" : "Barrier",
   "block.warhammer.barrier_green_block" : "Green Barrier",

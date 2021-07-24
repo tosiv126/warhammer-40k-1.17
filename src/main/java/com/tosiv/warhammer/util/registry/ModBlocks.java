@@ -205,6 +205,9 @@ public class ModBlocks {
     public static final StairsBlock FERROCRETE_STAIRS = new CustomStairsBlock(ModBlocks.FERROCRETE_BLOCK.getDefaultState(), FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final StairsBlock FERROCRETE_GREEN_STAIRS = new CustomStairsBlock(ModBlocks.FERROCRETE_GREEN_BLOCK.getDefaultState(), FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final Block FERROCRETE_DECORATED_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_GREEN_DECORATED_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_DARK_DECORATED_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_TAN_DECORATED_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final Block CERAMITE_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.PLASTEEL_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final Block ADAMANTIUM_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.PLASTEEL_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final Block NECRON_GLYPH_BLOCK = new NecronGlyphBlock(FabricBlockSettings.copy(ModBlocks.NECRON_BLOCK));
@@ -225,6 +228,15 @@ public class ModBlocks {
     public static final Block ELDAR_DECORATED_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.ELDAR_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final StairsBlock ELDAR_STAIRS = new CustomStairsBlock(ModBlocks.ELDAR_BLOCK.getDefaultState(), FabricBlockSettings.copyOf((ModBlocks.ELDAR_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final SlabBlock ELDAR_SLAB = new SlabBlock(FabricBlockSettings.copyOf((ModBlocks.ELDAR_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_DECORATED_2_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_DECORATED_3_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_GREEN_DECORATED_2_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_GREEN_DECORATED_3_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_DARK_DECORATED_2_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_DARK_DECORATED_3_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_TAN_DECORATED_2_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_TAN_DECORATED_3_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+
 
 
     public static void registerBlocks() {
@@ -251,6 +263,18 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_stairs"), FERROCRETE_TAN_STAIRS);
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_decorated_block"), FERROCRETE_DECORATED_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_green_decorated_block"), FERROCRETE_GREEN_DECORATED_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_dark_decorated_block"), FERROCRETE_DARK_DECORATED_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_decorated_block"), FERROCRETE_TAN_DECORATED_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_decorated_2_block"), FERROCRETE_DECORATED_2_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_decorated_3_block"), FERROCRETE_DECORATED_3_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_green_decorated_2_block"), FERROCRETE_GREEN_DECORATED_2_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_green_decorated_3_block"), FERROCRETE_GREEN_DECORATED_3_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_dark_decorated_2_block"), FERROCRETE_DARK_DECORATED_2_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_dark_decorated_3_block"), FERROCRETE_DARK_DECORATED_3_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_decorated_2_block"), FERROCRETE_TAN_DECORATED_2_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_decorated_3_block"), FERROCRETE_TAN_DECORATED_3_BLOCK);
+
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "statue_one_block"), STATUE_ONE_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "statue_two_block"), STATUE_TWO_BLOCK);
@@ -322,6 +346,28 @@ public class ModBlocks {
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_decorated_block"),
                 new BlockItem(FERROCRETE_DECORATED_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_green_decorated_block"),
+                new BlockItem(FERROCRETE_GREEN_DECORATED_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_dark_decorated_block"),
+                new BlockItem(FERROCRETE_DARK_DECORATED_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_decorated_block"),
+                new BlockItem(FERROCRETE_TAN_DECORATED_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_decorated_2_block"),
+                new BlockItem(FERROCRETE_DECORATED_2_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_decorated_3_block"),
+                new BlockItem(FERROCRETE_DECORATED_3_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_green_decorated_2_block"),
+                new BlockItem(FERROCRETE_GREEN_DECORATED_2_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_green_decorated_3_block"),
+                new BlockItem(FERROCRETE_GREEN_DECORATED_3_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_dark_decorated_2_block"),
+                new BlockItem(FERROCRETE_DARK_DECORATED_2_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_dark_decorated_3_block"),
+                new BlockItem(FERROCRETE_DARK_DECORATED_3_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_decorated_2_block"),
+                new BlockItem(FERROCRETE_TAN_DECORATED_2_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_decorated_3_block"),
+                new BlockItem(FERROCRETE_TAN_DECORATED_3_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_slab"),
                 new BlockItem(FERROCRETE_SLAB, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
