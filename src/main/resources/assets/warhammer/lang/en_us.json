@@ -22,8 +22,12 @@
   "item.warhammer.bolt_pistol": "Bolt Pistol",
   "item.warhammer.bolter": "Bolter",
   "item.warhammer.autopistol": "Autopistol",
+  "item.warhammer.pulse_carbine": "Pulse Carbine",
 
   "item.warhammer.nutrient_paste": "Nutrient Paste",
+
+  "entity.warhammer.gun_drone": "Tau Drone",
+  "entity.warhammer.scarab": "Necron Scarab",
 
   "item.warhammer.raw_adamantium" : "Raw Adamantium",
   "item.warhammer.raw_ceramite" : "Raw Ceramite",
@@ -31,8 +35,15 @@
   "item.warhammer.adamantium_ingot" : "Adamantium Ingot",
   "item.warhammer.ceramite_ingot" : "Ceramite Ingot",
   "item.warhammer.plasteel_ingot" : "Plasteel Ingot",
+  "item.warhammer.necrodermis_ingot" : "Necrodermis Ingot",
+  "item.warhammer.fiotak_ingot" : "Fio'Tak Ingot",
 
   "item.warhammer.plasteel_pickaxe" : "Plasteel Pickaxe",
+  "item.warhammer.combat_knife" : "Combat Knife",
+  "item.warhammer.entrenching_tool" : "Entrenching Tool",
+  "item.warhammer.ig_chainsword" : "Imperial Guard Chainsword",
+  "item.warhammer.thunder_hammer" : "Thunder Hammer",
+  "item.warhammer.hyperphase_sword" : "Hyperphase Sword",
 
   "block.warhammer.adamantium_ore_block" : "Adamantium Ore",
   "block.warhammer.ceramite_ore_block" : "Ceramite Ore",

@@ -4,18 +4,18 @@ import com.tosiv.warhammer.util.registry.ModItems;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class PlasteelToolMaterial implements ToolMaterial {
+public class NecrodermisToolMaterial implements ToolMaterial {
 
-    public static final PlasteelToolMaterial INSTANCE = new PlasteelToolMaterial();
+    public static final NecrodermisToolMaterial INSTANCE = new NecrodermisToolMaterial();
 
     @Override
     public int getDurability() {
-        return 500;
+        return 3000;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 6;
+        return 10;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class PlasteelToolMaterial implements ToolMaterial {
 
     @Override
     public int getMiningLevel() {
-        return 2;
+        return 3;
     }
 
     @Override
@@ -35,6 +35,6 @@ public class PlasteelToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ModItems.PLASTEEL_INGOT);
+        return Ingredient.ofItems(ModItems.NECRODERMIS_INGOT);
     }
 }

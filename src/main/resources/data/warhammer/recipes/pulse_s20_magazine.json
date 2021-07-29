@@ -1,20 +1,17 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "###",
-        "#w#",
-        "###"
+        "w ",
+        "w ",
+        "  "
     ],
     "key": {
-        "#": {
-            "item": "minecraft:yellow_terracotta"
-        },
         "w": {
             "item": "warhammer:fiotak_ingot"
         }
     },
     "result": {
-        "item": "warhammer:tau_block",
-        "count": 16
+        "item": "warhammer:pulse_s20_magazine",
+        "count": 1
     }
 }

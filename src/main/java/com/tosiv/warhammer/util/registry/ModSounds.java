@@ -23,6 +23,9 @@ public class ModSounds {
     public static final Identifier C9MM_SHOOT = new Identifier("warhammer:9mmshoot");
     public static SoundEvent C9MM_SHOOT_EVENT = new SoundEvent(C9MM_SHOOT);
 
+    public static final Identifier PULSE_CARBINE_SHOOT = new Identifier("warhammer:pulsecarbineshoot");
+    public static SoundEvent PULSE_CARBINE_SHOOT_EVENT = new SoundEvent(PULSE_CARBINE_SHOOT);
+
     public static final Identifier C19MM_SHOOT = new Identifier("warhammer:19mmshoot");
     public static SoundEvent C19MM_SHOOT_EVENT = new SoundEvent(C19MM_SHOOT);
 
@@ -39,6 +42,7 @@ public class ModSounds {
         Registry.register(Registry.SOUND_EVENT, BOLTER_SHOOT, BOLTER_SHOOT_EVENT);
         Registry.register(Registry.SOUND_EVENT, C9MM_SHOOT, C9MM_SHOOT_EVENT);
         Registry.register(Registry.SOUND_EVENT, C19MM_SHOOT, C19MM_SHOOT_EVENT);
+        Registry.register(Registry.SOUND_EVENT, PULSE_CARBINE_SHOOT, PULSE_CARBINE_SHOOT_EVENT);
         Registry.register(Registry.SOUND_EVENT, BOLT_HIT, BOLT_HIT_EVENT);
         Registry.register(Registry.SOUND_EVENT, BOLT_RELOAD, BOLT_RELOAD_EVENT);
     }

@@ -29,6 +29,7 @@ public final class MagazineRegistry {
     public static final MagazineItem C9MM_S20_MAGAZINE;
     public static final MagazineItem BOLT_S12_MAGAZINE;
     public static final MagazineItem BOLT_S24_MAGAZINE;
+    public static final MagazineItem PULSE_S20_MAGAZINE;
 
     public static void register() {
         ArrayList<String> sortedItems = new ArrayList<>(MAGAZINES.keySet());
@@ -74,6 +75,9 @@ public final class MagazineRegistry {
 
         BOLT_S24_MAGAZINE = new MagazineItem(defaultMagazineSettings, Caliber.CAL_19, 24);
         MAGAZINES.put("bolt_s24_magazine", BOLT_S24_MAGAZINE);
+
+        PULSE_S20_MAGAZINE = new MagazineItem(defaultMagazineSettings, Caliber.PULSE, 20);
+        MAGAZINES.put("pulse_s20_magazine", PULSE_S20_MAGAZINE);
 
     }
 

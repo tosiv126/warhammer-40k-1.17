@@ -1,20 +1,21 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "###",
-        "#w#",
-        "###"
+        " ",
+        "G",
+        "c"
     ],
     "key": {
-        "#": {
-            "item": "minecraft:yellow_terracotta"
+
+        "G": {
+            "item": "minecraft:iron_ingot"
         },
-        "w": {
+        "c": {
             "item": "warhammer:fiotak_ingot"
         }
     },
     "result": {
-        "item": "warhammer:tau_block",
+        "item": "warhammer:pulse_cartridge",
         "count": 16
     }
 }

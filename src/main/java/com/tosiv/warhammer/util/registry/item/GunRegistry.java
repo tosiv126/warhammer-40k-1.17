@@ -20,6 +20,7 @@ public final class GunRegistry {
     public static final GunItem BOLT_PISTOL;
     public static final GunItem BOLTER;
     public static final GunItem AUTOPISTOL;
+    public static final GunItem PULSE_CARBINE;
     /*
     public static final GunItem AA12;
     public static final GunItem RIFLE;
@@ -45,7 +46,7 @@ public final class GunRegistry {
         BOLT_PISTOL.setSound(GunItem.SoundType.RELOAD, ModSounds.BOLT_RELOAD_EVENT);
         GUNS.put("bolt_pistol", BOLT_PISTOL);
 
-        BOLTER = new GunItem(defaultGunSettings, Caliber.CAL_19, 20, true, 5, 1, 0.8F, 1F);
+        BOLTER = new GunItem(defaultGunSettings, Caliber.CAL_19, 20, true, 5, 1, 0.8F, 2F);
         BOLTER.addMagazineCapacity(24);
         BOLTER.setSound(GunItem.SoundType.SHOOT, ModSounds.C19MM_SHOOT_EVENT);
         BOLTER.setSound(GunItem.SoundType.RELOAD, ModSounds.BOLT_RELOAD_EVENT);
@@ -56,6 +57,12 @@ public final class GunRegistry {
         AUTOPISTOL.setSound(GunItem.SoundType.SHOOT, ModSounds.C9MM_SHOOT_EVENT);
         AUTOPISTOL.setSound(GunItem.SoundType.RELOAD, ModSounds.RELOAD_EVENT);
         GUNS.put("autopistol", AUTOPISTOL);
+
+       PULSE_CARBINE = new GunItem(defaultGunSettings, Caliber.PULSE, 3, true, 2, 1, 0.8F, 1F);
+        PULSE_CARBINE.addMagazineCapacity(20);
+        PULSE_CARBINE.setSound(GunItem.SoundType.SHOOT, ModSounds.PULSE_CARBINE_SHOOT_EVENT);
+        PULSE_CARBINE.setSound(GunItem.SoundType.RELOAD, ModSounds.RELOAD_EVENT);
+        GUNS.put("pulse_carbine", PULSE_CARBINE);
 
         /*
         RIFLE = new GunItem(defaultGunSettings, Caliber.CAL_12, 6, true, 6,2, 1F, 2.5F);

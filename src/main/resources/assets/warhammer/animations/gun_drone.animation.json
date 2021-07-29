@@ -1,0 +1,43 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"gun_drone.walk": {
+			"loop": true,
+			"animation_length": 1.08,
+			"bones": {
+				"body": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.6": {
+							"vector": [0, 2, 0]
+						},
+						"1.08": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"gun_drone.idle": {
+			"loop": true,
+			"animation_length": 1.04,
+			"bones": {
+				"body": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.52": {
+							"vector": [0, 1, 0]
+						},
+						"1.04": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -27,6 +27,7 @@ public final class CartridgeRegistry {
     */
     public static final CartridgeItem C9MM;
     public static final CartridgeItem C19MM;
+    public static final CartridgeItem PULSE_CARTRIDGE;
 
     public static void register() {
         ArrayList<String> sortedItems = new ArrayList<>(CARTRIDGES.keySet());
@@ -71,6 +72,9 @@ public final class CartridgeRegistry {
 
         C19MM = new CartridgeItem(defaultCartridgeSettings, Caliber.CAL_19, 10, 300, 1, false, false, 1);
         CARTRIDGES.put("c19mm_cartridge", C19MM);
+
+        PULSE_CARTRIDGE = new CartridgeItem(defaultCartridgeSettings, Caliber.PULSE, 5, 300, 2, false, false, 1);
+        CARTRIDGES.put("pulse_cartridge", PULSE_CARTRIDGE);
 
     }
 

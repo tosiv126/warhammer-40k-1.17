@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " ##",
+    " /#",
+    " /#"
+  ],
+  "key": {
+    "#": {
+      "item": "warhammer:necrodermis_ingot"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "warhammer:hyperphase_sword",
+    "count": 1
+  }
+}

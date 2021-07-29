@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_ingot",
+          "name": "warhammer:necrodermis_ingot",
           "functions": [
             {
               "function": "minecraft:set_count",

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C#C",
+    "C/C",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "item": "warhammer:adamantium_ingot"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "C": {
+      "item": "warhammer:plasteel_ingot"
+    }
+  },
+  "result": {
+    "item": "warhammer:combat_knife",
+    "count": 1
+  }
+}
