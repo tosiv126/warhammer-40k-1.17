@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:black_concrete"
+      "item": "minecraft:gray_concrete"
     },
     "w": {
       "item": "warhammer:plasteel_ingot"
     }
   },
   "result": {
-    "item": "warhammer:ferrocrete_green_block",
+    "item": "warhammer:ferrocrete_dark_block",
     "count": 16
   }
 }

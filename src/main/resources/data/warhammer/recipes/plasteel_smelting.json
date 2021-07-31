@@ -1,9 +1,9 @@
 {
-  "type": "minecraft:blasting",
+  "type": "minecraft:smelting",
   "ingredient": {
     "item": "warhammer:raw_plasteel"
   },
   "result": "warhammer:plasteel_ingot",
   "experience": 0.1,
-  "cookingtime": 400
+  "cookingtime": 200
 }
