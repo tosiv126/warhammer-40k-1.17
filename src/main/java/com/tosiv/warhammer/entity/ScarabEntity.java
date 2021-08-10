@@ -1,6 +1,5 @@
 package com.tosiv.warhammer.entity;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -8,7 +7,6 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -41,11 +39,11 @@ public class ScarabEntity extends HostileEntity implements IAnimatable {
             return PlayState.CONTINUE;
         }
         if (this.isAttacking() && !(this.dead || this.getHealth() < 0.01 || this.isDead())) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("attack", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("scarab.walk", true));
             return PlayState.CONTINUE;
         }
         if ((this.dead || this.getHealth() < 0.01 || this.isDead())) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("death", false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("scarab.walk", false));
             return PlayState.CONTINUE;
         }
         event.getController().setAnimation(new AnimationBuilder().addAnimation("scarab.idle", true));
@@ -66,12 +64,16 @@ public class ScarabEntity extends HostileEntity implements IAnimatable {
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new MeleeAttackGoal(this, 0.5D, false));
-        this.goalSelector.add(2, new WanderAroundGoal(this, 0.5D));
-        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 5.0F));
-        this.goalSelector.add(4, new LookAroundGoal(this));
+        this.goalSelector.add(1, new PounceAtTargetGoal(this, 0.4F));
+        this.goalSelector.add(2, new MeleeAttackGoal(this, 0.5D, false));
+        this.goalSelector.add(3, new WanderAroundGoal(this, 0.5D));
+        this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 5.0F));
+        this.goalSelector.add(5, new LookAroundGoal(this));
 
         this.targetSelector.add(1, new FollowTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(2, new FollowTargetGoal<>(this, TauWarriorEntity.class, true));
+        this.targetSelector.add(3, new FollowTargetGoal<>(this, IgChainswordVillagerEntity.class, true));
+        this.targetSelector.add(4, new FollowTargetGoal<>(this, GunDroneEntity.class, true));
     }
     @Override
     protected SoundEvent getAmbientSound() {

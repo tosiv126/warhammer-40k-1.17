@@ -44,6 +44,7 @@
   "item.warhammer.ig_chainsword" : "Imperial Guard Chainsword",
   "item.warhammer.thunder_hammer" : "Thunder Hammer",
   "item.warhammer.hyperphase_sword" : "Hyperphase Sword",
+  "item.warhammer.transonic_sword" : "Transonic Blade",
 
   "block.warhammer.adamantium_ore_block" : "Adamantium Ore",
   "block.warhammer.ceramite_ore_block" : "Ceramite Ore",
@@ -97,6 +98,9 @@
   "block.warhammer.statue_two_dark_block" : "Praying Statue",
   "block.warhammer.statue_three_dark_block" : "Warrior Statue",
 
+  "block.warhammer.imperial_door_block": "Imperial Door",
+  "block.warhammer.necron_door_block": "Necron Door",
+
   "block.warhammer.plasteel_block": "Plasteel Block",
   "block.warhammer.ceramite_block": "Ceramite Block",
   "block.warhammer.adamantium_block": "Adamantium Block",
@@ -126,7 +130,7 @@
   "warhammer.flak_armor.text" : "Equipment of the Imperial Guard",
 
   "achievement.warhammer.Root" : "Warhammer 40K",
-  "achievement.warhammer.Root.desc" : "In the Grim Darkness of the Far Future there is Only War.",
+  "achievement.warhammer.Root.desc" : "In the Grim Darkness of the Far Future There is Only War.",
   "achievement.warhammer.PlasteelIngot" : "A New Alloy",
   "achievement.warhammer.PlasteelIngot.desc" : "Smelt a piece of raw plasteel",
   "achievement.warhammer.NutrientPaste" : "Does This Count as Food?",

@@ -1,0 +1,210 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"tau_warrior.idle": {
+			"animation_length": 2.6,
+			"bones": {
+				"head": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.28": {
+							"vector": [10, -12.5, 0]
+						},
+						"0.6": {
+							"vector": [13.12, -32.5, 0],
+							"easing": "easeInSine"
+						},
+						"0.92": {
+							"vector": [13.12, -32.5, 0],
+							"easing": "easeInSine"
+						},
+						"1.28": {
+							"vector": [-7.5, -12.5, 0]
+						},
+						"1.84": {
+							"vector": [-7.5, 45, 0]
+						},
+						"2.04": {
+							"vector": [-7.5, 45, 0]
+						},
+						"2.6": {
+							"vector": [-5, -2.5, 0]
+						}
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [55, 0, 0]
+					}
+				},
+				"carbine": {
+					"rotation": {
+						"vector": [0, 20, 0]
+					},
+					"position": {
+						"vector": [0, 1, -2]
+					}
+				}
+			}
+		},
+		"tau_warrior.walk": {
+			"loop": true,
+			"animation_length": 1.88,
+			"bones": {
+				"head": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.68": {
+							"vector": [-3.84, 0, 0]
+						},
+						"1.28": {
+							"vector": [-2.5, 0, 0]
+						},
+						"1.88": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.04": {
+							"vector": [0, 0, 0]
+						},
+						"1.88": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"0.0": {
+							"vector": [47.5, 0, 0]
+						},
+						"0.56": {
+							"vector": [57.5, 0, 0]
+						},
+						"1.04": {
+							"vector": [65, 0, 0]
+						},
+						"1.88": {
+							"vector": [45, 0, 0],
+							"easing": "easeInSine"
+						}
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.52": {
+							"vector": [-25, 0, 0]
+						},
+						"1.04": {
+							"vector": [0, 0, 0]
+						},
+						"1.48": {
+							"vector": [25, 0, 0]
+						},
+						"1.88": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.52": {
+							"vector": [-20, 0, 0]
+						},
+						"1.04": {
+							"vector": [-2.5, 0, 0]
+						},
+						"1.48": {
+							"vector": [20, 0, 0]
+						},
+						"1.88": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.52": {
+							"vector": [22.5, 0, 0]
+						},
+						"1.04": {
+							"vector": [-2.5, 0, 0],
+							"easing": "easeInSine"
+						},
+						"1.48": {
+							"vector": [-32.5, 0, 0]
+						},
+						"1.88": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"carbine": {
+					"rotation": {
+						"vector": [0, 30, 42.5]
+					},
+					"position": {
+						"vector": [-8, -3, -5]
+					}
+				}
+			}
+		},
+		"tau_warrior.attack": {
+			"animation_length": 0.32,
+			"bones": {
+				"head": {
+					"rotation": {
+						"vector": [0, 0, 12.5]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [0, 12.5, -5]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [-60, -20, -45]
+					}
+				},
+				"carbine": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.08": {
+							"vector": [0, 1, 0]
+						},
+						"0.16": {
+							"vector": [0, 0, 0],
+							"easing": "easeInSine"
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

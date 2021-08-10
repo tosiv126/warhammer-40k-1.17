@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom",
+  "textures": {
+    "bottom": "warhammer:blocks/imperial_door_bottom",
+    "top": "warhammer:blocks/imperial_door_top"
+  }
+}

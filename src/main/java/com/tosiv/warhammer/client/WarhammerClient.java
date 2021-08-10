@@ -1,7 +1,9 @@
 package com.tosiv.warhammer.client;
 
 import com.tosiv.warhammer.client.renderer.GunDroneRenderer;
+import com.tosiv.warhammer.client.renderer.IgChainswordVillagerRenderer;
 import com.tosiv.warhammer.client.renderer.ScarabRenderer;
+import com.tosiv.warhammer.client.renderer.TauWarriorRenderer;
 import com.tosiv.warhammer.util.Utils;
 import com.tosiv.warhammer.util.registry.ClientEntityRendererRegistry;
 import com.tosiv.warhammer.util.registry.CustomEntityModelLayers;
@@ -23,6 +25,8 @@ public class WarhammerClient implements ClientModInitializer {
 
         EntityRendererRegistry.INSTANCE.register(EntityRegistry.SCARAB, ScarabRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityRegistry.GUN_DRONE, GunDroneRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityRegistry.TAU_WARRIOR, TauWarriorRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityRegistry.IG_CHAINSWORD_VILLAGER, IgChainswordVillagerRenderer::new);
 
         BlockRenders.defineRenders();
         registerEventHandlers();

@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "bottom": "warhammer:blocks/necron_door_bottom",
+    "top": "warhammer:blocks/necron_door_top"
+  }
+}

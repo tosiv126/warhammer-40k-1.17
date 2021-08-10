@@ -16,7 +16,17 @@ public class SpawnRegistry {
         net.fabricmc.fabric.api.biome.v1.BiomeModifications.addSpawn(BiomeSelectors.categories(
                 Biome.Category.DESERT, Biome.Category.PLAINS, Biome.Category.FOREST, Biome.Category.TAIGA, Biome.Category.JUNGLE),
                 SpawnGroup.MONSTER,
-                EntityRegistry.GUN_DRONE, 20, 1, 3);
+                EntityRegistry.GUN_DRONE, 10, 1, 3);
+
+        net.fabricmc.fabric.api.biome.v1.BiomeModifications.addSpawn(BiomeSelectors.categories(
+                Biome.Category.DESERT, Biome.Category.PLAINS, Biome.Category.FOREST, Biome.Category.TAIGA, Biome.Category.JUNGLE),
+                SpawnGroup.MONSTER,
+                EntityRegistry.TAU_WARRIOR, 20, 1, 3);
+
+        net.fabricmc.fabric.api.biome.v1.BiomeModifications.addSpawn(BiomeSelectors.categories(
+                Biome.Category.DESERT, Biome.Category.PLAINS, Biome.Category.FOREST, Biome.Category.TAIGA, Biome.Category.JUNGLE, Biome.Category.SWAMP),
+                SpawnGroup.CREATURE,
+                EntityRegistry.IG_CHAINSWORD_VILLAGER, 20, 1, 3);
 
 
     }

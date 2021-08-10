@@ -2,13 +2,14 @@ package com.tosiv.warhammer.util.registry;
 
 import com.tosiv.warhammer.Warhammer;
 import com.tosiv.warhammer.block.*;
-import com.tosiv.warhammer.block.BarrierBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tools.FabricToolTags;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.Material;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -198,6 +199,20 @@ public class ModBlocks {
             .sounds(BlockSoundGroup.BONE)
             .luminance(15));
 
+    public static final CustomDoorBlock NECRON_DOOR_BLOCK = new CustomDoorBlock(FabricBlockSettings
+            .of(Material.METAL)
+            .breakByTool(FabricToolTags.PICKAXES,3)
+            .requiresTool()
+            .strength(5.0f, 50.0f)
+            .sounds(BlockSoundGroup.ANCIENT_DEBRIS));
+
+    public static final CustomDoorBlock IMPERIAL_DOOR_BLOCK = new CustomDoorBlock(FabricBlockSettings
+            .of(Material.METAL)
+            .breakByTool(FabricToolTags.PICKAXES,2)
+            .requiresTool()
+            .strength(3.0f, 20.0f)
+            .sounds(BlockSoundGroup.METAL));
+
     public static final Block FERROCRETE_GREEN_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final Block FERROCRETE_TAN_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final SlabBlock FERROCRETE_SLAB = new SlabBlock(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
@@ -275,6 +290,7 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_decorated_2_block"), FERROCRETE_TAN_DECORATED_2_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_decorated_3_block"), FERROCRETE_TAN_DECORATED_3_BLOCK);
 
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "imperial_door_block"), IMPERIAL_DOOR_BLOCK);
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "statue_one_block"), STATUE_ONE_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "statue_two_block"), STATUE_TWO_BLOCK);
@@ -301,6 +317,7 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "necron_light_block"), NECRON_LIGHT_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "necron_stairs"), NECRON_STAIRS);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "necron_slab"), NECRON_SLAB);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "necron_door_block"), NECRON_DOOR_BLOCK);
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ork_block"), ORK_BLOCK);
 
@@ -415,6 +432,9 @@ public class ModBlocks {
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "statue_three_dark_block"),
                 new BlockItem(STATUE_THREE_DARK_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "imperial_door_block"),
+                new BlockItem(IMPERIAL_DOOR_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "symbol_chaos_block"),
                 new BlockItem(SYMBOL_CHAOS_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
@@ -437,6 +457,8 @@ public class ModBlocks {
                 new BlockItem(NECRON_STAIRS, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "necron_slab"),
                 new BlockItem(NECRON_SLAB, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "necron_door_block"),
+                new BlockItem(NECRON_DOOR_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "tau_block"),
                 new BlockItem(TAU_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));

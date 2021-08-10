@@ -66,8 +66,10 @@ public class ModItems {
     public static ToolItem IG_CHAINSWORD = new SwordItem(CeramiteToolMaterial.INSTANCE, 5, -2.4F, new Item.Settings().group(Warhammer.GENERAL_GROUP));
     public static ToolItem THUNDER_HAMMER = new SwordItem(AdamantiumToolMaterial.INSTANCE, 10, -3.4F, new Item.Settings().group(Warhammer.GENERAL_GROUP));
     public static ToolItem HYPERPHASE_SWORD = new SwordItem(NecrodermisToolMaterial.INSTANCE, 6, -1.5F, new Item.Settings().group(Warhammer.GENERAL_GROUP));
+    public static ToolItem TRANSONIC_SWORD = new SwordItem(CeramiteToolMaterial.INSTANCE, 4, -1.5F, new Item.Settings().group(Warhammer.GENERAL_GROUP));
 
     public static final Item WH_ICON = new Item(new Item.Settings());
+    public static final Item PULSE_CHARGE = new Item(new Item.Settings());
 
 
     public static void registerItems() {
@@ -90,6 +92,7 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID,"ig_chainsword"), IG_CHAINSWORD);
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID,"thunder_hammer"), THUNDER_HAMMER);
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID,"hyperphase_sword"), HYPERPHASE_SWORD);
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID,"transonic_sword"), TRANSONIC_SWORD);
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "lho_seeds"), LHO_SEEDS);
 
@@ -98,6 +101,7 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "lho_stick"), LHO_STICK);
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "wh_icon"), WH_ICON);
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "pulse_charge"), PULSE_CHARGE);
     }
 
 

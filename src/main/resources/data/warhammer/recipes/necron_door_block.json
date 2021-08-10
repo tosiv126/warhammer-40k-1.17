@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ww",
+        "ww",
+        "ww"
+    ],
+    "key": {
+        "w": {
+            "item": "warhammer:necrodermis_ingot"
+        }
+    },
+    "result": {
+        "item": "warhammer:necron_door_block",
+        "count": 3
+    }
+}

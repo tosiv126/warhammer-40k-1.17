@@ -10,7 +10,7 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.mob.FlyingEntity;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.Monster;
 import net.minecraft.entity.player.PlayerEntity;
@@ -31,23 +31,22 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.EnumSet;
-import java.util.Random;
 import java.util.UUID;
 
-public class GunDroneEntity extends FlyingEntity implements IAnimatable, Monster {
+public class TauWarriorEntity extends HostileEntity implements IAnimatable, Monster {
     AnimationFactory factory = new AnimationFactory(this);
     private UUID targetUuid;
     private static final TrackedData<Boolean> SHOOTING;
     private int fireballStrength = 1;
 
-    public GunDroneEntity(EntityType<? extends FlyingEntity> type, World world) {
+    public TauWarriorEntity(EntityType<? extends HostileEntity> type, World world) {
         super(type, world);
 
         this.experiencePoints = 5;
-        this.moveControl = new GunDroneEntity.GunDroneMoveControl(this);
+        this.moveControl = new TauWarriorEntity.GunDroneMoveControl(this);
     }
 
-    public static DefaultAttributeContainer.Builder createGunDroneAttributes() {
+    public static DefaultAttributeContainer.Builder createTauWarriorAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 10D)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5D)
@@ -56,25 +55,25 @@ public class GunDroneEntity extends FlyingEntity implements IAnimatable, Monster
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (!(lastLimbDistance > -0.10F && lastLimbDistance < 0.10F) && !this.isAttacking()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("gun_drone.walk", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("tau_warrior.walk", true));
             return PlayState.CONTINUE;
         }
         if (this.isShooting() && !(this.dead || this.getHealth() < 0.01 || this.isDead())) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("gun_drone.idle", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("tau_warrior.attack", true));
             return PlayState.CONTINUE;
         }
         if ((this.dead || this.getHealth() < 0.01 || this.isDead())) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("gun_drone.idle", false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("tau_warrior.idle", false));
             return PlayState.CONTINUE;
         }
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("gun_drone.idle", true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("tau_warrior.idle", true));
         return PlayState.CONTINUE;
     }
 
     @Override
     public void registerControllers(AnimationData data) {
         data.addAnimationController(
-                new AnimationController<GunDroneEntity>(this, "controller", 0, this::predicate));
+                new AnimationController<TauWarriorEntity>(this, "controller", 0, this::predicate));
     }
 
     @Override
@@ -85,23 +84,22 @@ public class GunDroneEntity extends FlyingEntity implements IAnimatable, Monster
     @Override
     protected void initGoals() {
 
+        this.goalSelector.add(1, new SwimGoal(this));
+        this.goalSelector.add(2, new FleeEntityGoal(this, ScarabEntity.class, 6.0F, 1.0D, 1.2D));
+        this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0D));
+        this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
+        this.goalSelector.add(5, new LookAroundGoal(this));
 
-        this.goalSelector.add(5, new GunDroneEntity.FlyRandomlyGoal(this));
-        this.goalSelector.add(7, new GunDroneEntity.LookAtTargetGoal(this));
-        this.goalSelector.add(7, new GunDroneEntity.ShootFireballGoal(this));
-        this.goalSelector.add(10, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
-        this.goalSelector.add(11, new LookAroundGoal(this));
+        this.goalSelector.add(6, new TauWarriorEntity.LookAtTargetGoal(this));
+        this.goalSelector.add(7, new TauWarriorEntity.ShootFireballGoal(this));
 
-        this.targetSelector.add(1, new FollowTargetGoal<>(this, PlayerEntity.class, 10, true, false, (livingEntity) -> {
-            return Math.abs(this.getY() - this.getY()) <= 4.0D;
-        }));
-        this.targetSelector.add(1, new FollowTargetGoal<>(this, ScarabEntity.class, 10, true, false, (livingEntity) -> {
-            return Math.abs(this.getY() - this.getY()) <= 4.0D;
-        }));
-        this.targetSelector.add(1, new FollowTargetGoal<>(this, IgChainswordVillagerEntity.class, 10, true, false, (livingEntity) -> {
-            return Math.abs(this.getY() - this.getY()) <= 4.0D;
-        }));
+        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
+        this.goalSelector.add(9, new LookAroundGoal(this));
 
+        this.targetSelector.add(1, new RevengeGoal(this, new Class[0]));
+        this.targetSelector.add(2, new FollowTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(3, new FollowTargetGoal<>(this, ScarabEntity.class, true));
+        this.targetSelector.add(3, new FollowTargetGoal<>(this, IgChainswordVillagerEntity.class, true));
 
     }
 
@@ -138,7 +136,7 @@ public class GunDroneEntity extends FlyingEntity implements IAnimatable, Monster
     }
 
     public int getLimitPerChunk() {
-        return 2;
+        return 5;
     }
 
     public void writeCustomDataToNbt(NbtCompound nbt) {
@@ -148,21 +146,21 @@ public class GunDroneEntity extends FlyingEntity implements IAnimatable, Monster
 
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
-        if (nbt.contains("ExplosionPower", 0)) {
+        if (nbt.contains("ExplosionPower", 3)) {
             this.fireballStrength = nbt.getByte("ExplosionPower");
         }
 
     }
 
     static {
-        SHOOTING = DataTracker.registerData(GunDroneEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+        SHOOTING = DataTracker.registerData(TauWarriorEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     }
 
     static class GunDroneMoveControl extends MoveControl {
-        private final GunDroneEntity gun_drone;
+        private final TauWarriorEntity gun_drone;
         private int collisionCheckCooldown;
 
-        public GunDroneMoveControl(GunDroneEntity gun_drone) {
+        public GunDroneMoveControl(TauWarriorEntity gun_drone) {
             super(gun_drone);
             this.gun_drone = gun_drone;
         }
@@ -198,44 +196,10 @@ public class GunDroneEntity extends FlyingEntity implements IAnimatable, Monster
         }
     }
 
-    private static class FlyRandomlyGoal extends Goal {
-        private final GunDroneEntity gun_drone;
-
-        public FlyRandomlyGoal(GunDroneEntity gun_drone) {
-            this.gun_drone = gun_drone;
-            this.setControls(EnumSet.of(Control.MOVE));
-        }
-
-        public boolean canStart() {
-            MoveControl moveControl = this.gun_drone.getMoveControl();
-            if (!moveControl.isMoving()) {
-                return true;
-            } else {
-                double d = moveControl.getTargetX() - this.gun_drone.getX();
-                double e = moveControl.getTargetY() - this.gun_drone.getY();
-                double f = moveControl.getTargetZ() - this.gun_drone.getZ();
-                double g = d * d + e * e + f * f;
-                return g < 1.0D || g > 3600.0D;
-            }
-        }
-
-        public boolean shouldContinue() {
-            return false;
-        }
-
-        public void start() {
-            Random random = this.gun_drone.getRandom();
-            double d = this.gun_drone.getX() + (double)((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
-            double e = this.gun_drone.getY() + (double)((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
-            double f = this.gun_drone.getZ() + (double)((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
-            this.gun_drone.getMoveControl().moveTo(d, e, f, 1.0D);
-        }
-    }
-
     static class LookAtTargetGoal extends Goal {
-        private final GunDroneEntity gun_drone;
+        private final TauWarriorEntity gun_drone;
 
-        public LookAtTargetGoal(GunDroneEntity gun_drone) {
+        public LookAtTargetGoal(TauWarriorEntity gun_drone) {
             this.gun_drone = gun_drone;
             this.setControls(EnumSet.of(Control.LOOK));
         }
@@ -264,10 +228,10 @@ public class GunDroneEntity extends FlyingEntity implements IAnimatable, Monster
     }
 
     private static class ShootFireballGoal extends Goal {
-        private final GunDroneEntity gun_drone;
+        private final TauWarriorEntity gun_drone;
         public int cooldown;
 
-        public ShootFireballGoal(GunDroneEntity gun_drone) {
+        public ShootFireballGoal(TauWarriorEntity gun_drone) {
             this.gun_drone = gun_drone;
         }
 

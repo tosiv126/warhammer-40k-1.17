@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ww",
+        "ww",
+        "ww"
+    ],
+    "key": {
+        "w": {
+            "item": "warhammer:plasteel_ingot"
+        }
+    },
+    "result": {
+        "item": "warhammer:imperial_door_block",
+        "count": 3
+    }
+}
