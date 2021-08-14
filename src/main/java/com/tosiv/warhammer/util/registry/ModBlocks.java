@@ -2,13 +2,11 @@ package com.tosiv.warhammer.util.registry;
 
 import com.tosiv.warhammer.Warhammer;
 import com.tosiv.warhammer.block.*;
+import com.tosiv.warhammer.block.BarrierBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tools.FabricToolTags;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
@@ -252,7 +250,7 @@ public class ModBlocks {
     public static final Block FERROCRETE_TAN_DECORATED_2_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final Block FERROCRETE_TAN_DECORATED_3_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
 
-
+    public static final Block IMPERIAL_FABRICATION_BENCH = new FabricationBenchBlock(FabricBlockSettings.copyOf(Blocks.SMITHING_TABLE));
 
     public static void registerBlocks() {
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "adamantium_ore_block"), ADAMANTIUM_ORE_BLOCK);
@@ -486,5 +484,8 @@ public class ModBlocks {
                 new BlockItem(ORK_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "red_barrel"),
                 new BlockItem(RED_BARREL, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "imperial_fabrication_bench"), IMPERIAL_FABRICATION_BENCH);
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "imperial_fabrication_bench"), new BlockItem(IMPERIAL_FABRICATION_BENCH, new FabricItemSettings().group(Warhammer.WIP_GROUP)));
     }
 }
