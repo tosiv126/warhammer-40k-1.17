@@ -48,16 +48,16 @@ public class FabricationBenchRecipe implements Recipe<PlayerInventory> {
             ItemStack invStack = inventory.getStack(i);
             if (!invStack.isEmpty()) {
                 ItemStack stack = invStack.copy();
-                for (Iterator<Pair<Ingredient, Integer>> iterator = input.iterator(); iterator.hasNext(); ) {
+                int amount = stack.getCount();
+                for (Iterator<Pair<Ingredient, Integer>> iterator = copy.iterator(); iterator.hasNext(); ) {
                     Pair<Ingredient, Integer> pair = iterator.next();
                     if (pair.getLeft().test(stack)) {
                         int remaining = pair.getRight();
-                        int amount = Math.min(stack.getCount(), remaining);
-                        stack.decrement(amount);
+                        int toConsume = Math.min(amount, remaining);
                         if(consumeItems) {
-                            inventory.removeStack(i, amount);
+                            inventory.removeStack(i, toConsume);
                         }
-                        remaining -= amount;
+                        remaining -= toConsume;
                         if (remaining <= 0) {
                             iterator.remove();
                         } else {
