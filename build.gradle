@@ -37,7 +37,7 @@ dependencies {
 
 }
 loom {
-	accessWidenerPath.set(file("src/main/resources/warhammer.accesswidener"))
+	accessWidenerPath.set(file("src/main/resources/META-INF/warhammer.accesswidener"))
 }
 
 processResources {
