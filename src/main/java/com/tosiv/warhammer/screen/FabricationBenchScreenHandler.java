@@ -14,12 +14,15 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
 
 import java.util.Optional;
 
 public class FabricationBenchScreenHandler extends ScreenHandler {
 
+    public static final Text TITLE = new TranslatableText("container.warhammer.fabrication");
     private final ScreenHandlerContext context;
     private final CraftingResultInventory result;
     private final PlayerEntity player;
@@ -33,18 +36,18 @@ public class FabricationBenchScreenHandler extends ScreenHandler {
         this.context = context;
         this.result = new CraftingResultInventory();
         this.player = playerInventory.player;
-        this.addSlot(new OutputSlot(playerInventory.player, this.result, 0, 124, 35));
+        this.addSlot(new OutputSlot(playerInventory.player, this.result, 0, 184, 37));
 
         // player inventory slots
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 9; col++) {
-                this.addSlot(new Slot(playerInventory, col + row * 9 + 9, 8 + col * 18, 84 + row * 18));
+                this.addSlot(new Slot(playerInventory, col + row * 9 + 9, 108 + col * 18, 84 + row * 18));
             }
         }
 
         // hotbar
         for (int col = 0; col < 9; col++) {
-            this.addSlot(new Slot(playerInventory, col, 8 + col * 18, 142));
+            this.addSlot(new Slot(playerInventory, col, 108 + col * 18, 142));
         }
     }
 
@@ -60,7 +63,7 @@ public class FabricationBenchScreenHandler extends ScreenHandler {
             ItemStack itemStack = ItemStack.EMPTY;
             Optional<CraftingRecipe> optional = world.getServer().getRecipeManager().getFirstMatch(RecipeType.CRAFTING, craftingInventory, world);
             if (optional.isPresent()) {
-                CraftingRecipe craftingRecipe = (CraftingRecipe) optional.get();
+                CraftingRecipe craftingRecipe = optional.get();
                 if (resultInventory.shouldCraftRecipe(world, serverPlayerEntity, craftingRecipe)) {
                     itemStack = craftingRecipe.craft(craftingInventory);
                 }

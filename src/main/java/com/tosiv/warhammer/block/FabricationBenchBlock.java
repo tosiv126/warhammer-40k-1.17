@@ -7,8 +7,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
-import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.Property;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -18,7 +18,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class FabricationBenchBlock extends Block {
 
-    private static final Text TITLE = new TranslatableText("container.warhammer.crafting");
+    public static final Property<Direction> FACING = HorizontalFacingBlock.FACING;
 
     public FabricationBenchBlock(Settings settings) {
         super(settings);
@@ -38,6 +38,6 @@ public class FabricationBenchBlock extends Block {
     @Nullable
     @Override
     public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
-        return new SimpleNamedScreenHandlerFactory((syncId, inventory, player) -> new FabricationBenchScreenHandler(syncId, inventory, ScreenHandlerContext.create(world, pos)), TITLE);
+        return new SimpleNamedScreenHandlerFactory((syncId, inventory, player) -> new FabricationBenchScreenHandler(syncId, inventory, ScreenHandlerContext.create(world, pos)), FabricationBenchScreenHandler.TITLE);
     }
 }
