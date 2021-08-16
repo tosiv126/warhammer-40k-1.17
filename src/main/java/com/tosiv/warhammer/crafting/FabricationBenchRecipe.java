@@ -79,8 +79,8 @@ public class FabricationBenchRecipe implements Recipe<PlayerInventory> {
 
     @Override
     public ItemStack craft(PlayerInventory inventory) {
-        countMissingItems(inventory, true);
-        return getOutput().copy();
+        int missing = countMissingItems(inventory, !inventory.player.isCreative());
+        return missing == 0 ? getOutput().copy() : ItemStack.EMPTY;
     }
 
     @Override

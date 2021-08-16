@@ -1,6 +1,7 @@
 package com.tosiv.warhammer;
 
 import com.tosiv.warhammer.item.ReloadableItem;
+import com.tosiv.warhammer.network.SetFabricationBenchRecipeC2SPacket;
 import com.tosiv.warhammer.screen.FabricationBenchScreenHandler;
 import com.tosiv.warhammer.util.Utils;
 import com.tosiv.warhammer.util.registry.*;
@@ -49,6 +50,7 @@ public class Warhammer implements ModInitializer {
         EntityRegistry.register();
         SpawnRegistry.register();
         ModRecipes.register();
+        ServerPlayNetworking.registerGlobalReceiver(SetFabricationBenchRecipeC2SPacket.ID, SetFabricationBenchRecipeC2SPacket::onPacket);
     }
 
     private void registerPacketHandlers() {
