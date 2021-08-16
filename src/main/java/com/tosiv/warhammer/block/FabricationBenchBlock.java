@@ -45,7 +45,8 @@ public class FabricationBenchBlock extends HorizontalFacingBlock {
             return ActionResult.SUCCESS;
         } else {
             player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
-            //player.incrementStat(Stats.INTERACT_WITH_CRAFTING_TABLE);
+            // TODO increment interact stat
+            // player.incrementStat(ModStats.FABRICATION_TABLE_INTERACT);
             return ActionResult.CONSUME;
         }
     }

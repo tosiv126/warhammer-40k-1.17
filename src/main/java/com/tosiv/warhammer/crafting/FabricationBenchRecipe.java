@@ -15,6 +15,10 @@ import net.minecraft.util.Pair;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class FabricationBenchRecipe implements Recipe<PlayerInventory> {
 
     private static final int MAX_ALLOWED_ITEMS = 5;
@@ -31,17 +35,53 @@ public class FabricationBenchRecipe implements Recipe<PlayerInventory> {
 
     @Override
     public boolean matches(PlayerInventory inventory, World world) {
-        return false;
+        return gatherIngredients(inventory, false).isEmpty();
+    }
+
+    private List<Pair<Ingredient, Integer>> gatherIngredients(PlayerInventory inventory, boolean consumeItems) {
+        // make a deep copy of the inputs that we can subsequently modify
+        List<Pair<Ingredient, Integer>> copy = new ArrayList<>();
+        input.forEach(pair -> copy.add(new Pair<>(pair.getLeft(), pair.getRight())));
+
+        inv:
+        for (int i = 0; i < inventory.size(); i++) {
+            ItemStack invStack = inventory.getStack(i);
+            if (!invStack.isEmpty()) {
+                ItemStack stack = invStack.copy();
+                for (Iterator<Pair<Ingredient, Integer>> iterator = input.iterator(); iterator.hasNext(); ) {
+                    Pair<Ingredient, Integer> pair = iterator.next();
+                    if (pair.getLeft().test(stack)) {
+                        int remaining = pair.getRight();
+                        int amount = Math.min(stack.getCount(), remaining);
+                        stack.decrement(amount);
+                        if(consumeItems) {
+                            inventory.removeStack(i, amount);
+                        }
+                        remaining -= amount;
+                        if (remaining <= 0) {
+                            iterator.remove();
+                        } else {
+                            pair.setRight(remaining);
+                        }
+                        if (stack.isEmpty()) {
+                            continue inv;
+                        }
+                    }
+                }
+            }
+        }
+        return copy;
     }
 
     @Override
     public ItemStack craft(PlayerInventory inventory) {
-        return null;
+        gatherIngredients(inventory, true);
+        return getOutput().copy();
     }
 
     @Override
     public boolean fits(int width, int height) {
-        return width * height >= input.size();
+        return true;
     }
 
     @Override
@@ -79,7 +119,7 @@ public class FabricationBenchRecipe implements Recipe<PlayerInventory> {
             for (int i = 0; i < ingredients.size(); i++) {
                 JsonObject element = JsonHelper.asObject(ingredients.get(i), "ingredients[" + i + "]");
                 Ingredient ingredient = Ingredient.fromJson(element);
-                int amount = JsonHelper.getInt(element, "count");
+                int amount = JsonHelper.getInt(element, "count", 1);
                 if (!ingredient.isEmpty() && amount > 0) {
                     input.add(new Pair<>(ingredient, amount));
                 }
