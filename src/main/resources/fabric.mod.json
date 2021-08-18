@@ -30,7 +30,7 @@
     "warhammer.mixins.json"
   ],
 
-  "accessWidener" : "warhammer.accesswidener",
+  "accessWidener" : "META-INF/warhammer.accesswidener",
 
   "depends": {
     "fabricloader": ">=0.11.3",

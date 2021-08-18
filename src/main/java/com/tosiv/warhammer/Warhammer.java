@@ -1,6 +1,8 @@
 package com.tosiv.warhammer;
 
 import com.tosiv.warhammer.item.ReloadableItem;
+import com.tosiv.warhammer.network.SetFabricationBenchRecipeC2SPacket;
+import com.tosiv.warhammer.screen.FabricationBenchScreenHandler;
 import com.tosiv.warhammer.util.Utils;
 import com.tosiv.warhammer.util.registry.*;
 import com.tosiv.warhammer.util.registry.item.CartridgeRegistry;
@@ -10,8 +12,10 @@ import com.tosiv.warhammer.world.OreGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 
 public class Warhammer implements ModInitializer {
@@ -24,14 +28,14 @@ public class Warhammer implements ModInitializer {
     public static final ItemGroup WIP_GROUP = FabricItemGroupBuilder.create(
             new Identifier("warhammer", "wip"))
             .icon(() -> new ItemStack(ModItems.LHO_STICK)).build();
-
     public static Identifier MOD_ID(String path) {
         return new Identifier(Warhammer.MOD_ID, path);
     }
 
+    public static ScreenHandlerType<FabricationBenchScreenHandler> IMPERIAL_FABRICATION_BENCH = ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "imperial_fabrication_bench"), FabricationBenchScreenHandler::new);
+
     @Override
     public void onInitialize() {
-
         ModBlocks.registerBlocks();
         ModItems.registerItems();
         ModSounds.registerSounds();
@@ -45,7 +49,8 @@ public class Warhammer implements ModInitializer {
         //BlockRegistry.register();
         EntityRegistry.register();
         SpawnRegistry.register();
-
+        ModRecipes.register();
+        ServerPlayNetworking.registerGlobalReceiver(SetFabricationBenchRecipeC2SPacket.ID, SetFabricationBenchRecipeC2SPacket::onPacket);
     }
 
     private void registerPacketHandlers() {

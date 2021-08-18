@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.8-SNAPSHOT'
+	id 'fabric-loom' version '0.9.+'
 	id 'maven-publish'
 }
 
@@ -36,8 +36,8 @@ dependencies {
 	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.17:3.0.8:dev'
 
 }
-minecraft {
-	accessWidener "src/main/resources/warhammer.accesswidener"
+loom {
+	accessWidenerPath.set(file("src/main/resources/META-INF/warhammer.accesswidener"))
 }
 
 processResources {

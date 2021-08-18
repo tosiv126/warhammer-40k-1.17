@@ -136,5 +136,10 @@
   "achievement.warhammer.NutrientPaste" : "Does This Count as Food?",
   "achievement.warhammer.NutrientPaste.desc" : "Craft a Nutrient Paste Meal",
   "achievement.warhammer.RawAdamantium" : "Fit for the Emperor's Finest",
-  "achievement.warhammer.RawAdamantium.desc" : "Find a piece of adamantium"
+  "achievement.warhammer.RawAdamantium.desc" : "Find a piece of adamantium",
+
+  "block.warhammer.imperial_fabrication_bench" : "Imperial Fabrication Bench",
+  "container.warhammer.fabrication": "Imperial Fabrication Bench",
+  "container.warhammer.fabrication.recipes": "Recipes",
+  "container.warhammer.fabrication.missing_ingredients": "Missing required items!"
 }

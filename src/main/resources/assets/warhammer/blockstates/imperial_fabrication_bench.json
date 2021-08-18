@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "warhammer:block/imperial_fabrication_bench"
+    },
+    "facing=east": {
+      "model": "warhammer:block/imperial_fabrication_bench",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "warhammer:block/imperial_fabrication_bench",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "warhammer:block/imperial_fabrication_bench",
+      "y": 270
+    }
+  }
+}
