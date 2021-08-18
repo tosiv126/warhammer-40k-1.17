@@ -2,6 +2,7 @@ package com.tosiv.warhammer.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.tosiv.warhammer.Warhammer;
+import com.tosiv.warhammer.client.ScalableItemRenderer;
 import com.tosiv.warhammer.crafting.FabricationBenchRecipe;
 import com.tosiv.warhammer.network.SetFabricationBenchRecipeC2SPacket;
 import it.unimi.dsi.fastutil.objects.Object2BooleanArrayMap;
@@ -22,11 +23,12 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3f;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -36,6 +38,7 @@ public class FabricationBenchScreen extends HandledScreen<FabricationBenchScreen
     private static final Text RECIPES_TITLE = new TranslatableText("container.warhammer.fabrication.recipes");
     private static final Text MISSING_INGREDIENTS_TEXT = new TranslatableText("container.warhammer.fabrication.missing_ingredients");
     private static final int TITLE_COLOR = 0x404040;
+    private static final Vec3f RENDER_SCALE = new Vec3f(10 / 16F, 10 / 16F, 1.0F);
     private final PlayerInventory inventory;
     private final Object2BooleanMap<FabricationBenchRecipe> enabledRecipes = new Object2BooleanArrayMap<>();
     private final FabricationRecipeWidget[] currentPage = new FabricationRecipeWidget[7];
@@ -62,6 +65,25 @@ public class FabricationBenchScreen extends HandledScreen<FabricationBenchScreen
         });
     }
 
+    public void refreshRecipeList() {
+        World world = inventory.player.world;
+        // config
+        boolean onlyCraftableRecipes = false;
+        boolean onlyUnlockedRecipes = world.getGameRules().getBoolean(GameRules.DO_LIMITED_CRAFTING);
+
+        Stream<FabricationBenchRecipe> recipes = handler.getAllRecipes().stream();
+        if (onlyUnlockedRecipes) {
+            ClientRecipeBook recipeBook = ((ClientPlayerEntity) this.inventory.player).getRecipeBook();
+            recipes = recipes.filter(recipeBook::contains);
+        }
+        if (onlyCraftableRecipes) {
+            recipes = recipes.filter(it -> it.matches(this.inventory, world));
+        }
+        this.recipes = recipes.toList();
+        this.enabledRecipes.clear();
+        this.recipes.forEach(it -> this.enabledRecipes.put(it, it.matches(this.inventory, world)));
+    }
+
     @Override
     protected void init() {
         super.init();
@@ -83,25 +105,6 @@ public class FabricationBenchScreen extends HandledScreen<FabricationBenchScreen
         }
     }
 
-    public void refreshRecipeList() {
-        World world = inventory.player.world;
-        // config
-        boolean onlyCraftableRecipes = false;
-        boolean onlyUnlockedRecipes = world.getGameRules().getBoolean(GameRules.DO_LIMITED_CRAFTING);
-
-        Stream<FabricationBenchRecipe> recipes = handler.getAllRecipes().stream();
-        if (onlyUnlockedRecipes) {
-            ClientRecipeBook recipeBook = ((ClientPlayerEntity) this.inventory.player).getRecipeBook();
-            recipes = recipes.filter(recipeBook::contains);
-        }
-        if (onlyCraftableRecipes) {
-            recipes = recipes.filter(it -> it.matches(this.inventory, world));
-        }
-        this.recipes = recipes.toList();
-        this.enabledRecipes.clear();
-        this.recipes.forEach(it -> this.enabledRecipes.put(it, it.matches(this.inventory, world)));
-    }
-
     private void selectRecipe(FabricationBenchRecipe recipe) {
         SetFabricationBenchRecipeC2SPacket.send(recipe, this.handler.syncId);
     }
@@ -114,41 +117,36 @@ public class FabricationBenchScreen extends HandledScreen<FabricationBenchScreen
             int drawX = (this.width - this.backgroundWidth) / 2;
             int drawY = (this.height - this.backgroundHeight) / 2;
             int k = drawY + 16 + 1;
-            int l = drawX + 5 + 5;
             RenderSystem.setShader(GameRenderer::getPositionTexShader);
             RenderSystem.setShaderTexture(0, TEXTURE);
             this.renderScrollbar(matrices, drawX, drawY);
             int m = 0;
-            Iterator<FabricationBenchRecipe> i = recipes.iterator();
-
             FabricationBenchRecipe currentRecipe;
             boolean enabled;
-            while (i.hasNext()) {
-                currentRecipe = i.next();
-                if (this.canScroll(recipes.size()) && (m < this.indexStartOffset || m >= 7 + this.indexStartOffset)) {
-                    ++m;
-                } else {
+            for (FabricationBenchRecipe recipe : recipes) {
+                currentRecipe = recipe;
+                if (!this.canScroll(recipes.size()) || (m >= this.indexStartOffset && m < 7 + this.indexStartOffset)) {
+                    int n = k + 2;
                     enabled = enabledRecipes.getOrDefault(currentRecipe, false);
-                    //DefaultedList<Ingredient> inputs = currentRecipe.getIngredients();
-                    //ItemStack itemStack = currentRecipe.getOriginalFirstBuyItem();
-                    //ItemStack itemStack2 = currentRecipe.getAdjustedFirstBuyItem();
-                    //ItemStack itemStack3 = currentRecipe.getSecondBuyItem();
+                    DefaultedList<ItemStack> inputs = currentRecipe.getInputs();
+                    matrices.push();
+                    ((ScalableItemRenderer) this.itemRenderer).setScale(RENDER_SCALE);
+                    for (int i = 0; i < inputs.size(); i++) { // FIXME size
+                        ItemStack stack = inputs.get(i);
+                        this.itemRenderer.renderInGui(stack, drawX + 4 + i * 10, n);
+                        this.itemRenderer.renderGuiItemOverlay(this.textRenderer, stack, (int) ((drawX + 7 + i * 10) / RENDER_SCALE.getX()), (int) (n / RENDER_SCALE.getY()) + 6);
+                    }
+                    ((ScalableItemRenderer) this.itemRenderer).clearScale();
+                    matrices.pop();
                     ItemStack result = currentRecipe.getOutput();
                     this.itemRenderer.zOffset = 100.0F;
-                    int n = k + 2;
-                    //this.renderFirstBuyItem(matrices, itemStack2, itemStack, l, n);
-                    //if (!second.isEmpty()) {
-                    //	this.itemRenderer.renderInGui(itemStack3, drawX + 5 + 35, n);
-                    //	this.itemRenderer.renderGuiItemOverlay(this.textRenderer, itemStack3, drawX + 5 + 35, n);
-                    //}
-
                     this.renderArrow(matrices, enabled, drawX, n);
                     this.itemRenderer.renderInGui(result, drawX + 5 + 68, n);
                     this.itemRenderer.renderGuiItemOverlay(this.textRenderer, result, drawX + 5 + 68, n);
                     this.itemRenderer.zOffset = 0.0F;
                     k += 20;
-                    ++m;
                 }
+                ++m;
             }
 
             for (FabricationRecipeWidget widget : currentPage) {
@@ -255,22 +253,6 @@ public class FabricationBenchScreen extends HandledScreen<FabricationBenchScreen
         drawTexture(matrices, x + 5 + 35 + 20, y + 3, this.getZOffset(), enabled ? 15.0F : 25.0F, 171.0F, 10, 9, 256, 512);
     }
 
-    private void renderFirstBuyItem(MatrixStack matrices, ItemStack adjustedFirstBuyItem, ItemStack originalFirstBuyItem, int x, int y) {
-        this.itemRenderer.renderInGui(adjustedFirstBuyItem, x, y);
-        if (originalFirstBuyItem.getCount() == adjustedFirstBuyItem.getCount()) {
-            this.itemRenderer.renderGuiItemOverlay(this.textRenderer, adjustedFirstBuyItem, x, y);
-        } else {
-            this.itemRenderer.renderGuiItemOverlay(this.textRenderer, originalFirstBuyItem, x, y, originalFirstBuyItem.getCount() == 1 ? "1" : null);
-            this.itemRenderer.renderGuiItemOverlay(this.textRenderer, adjustedFirstBuyItem, x + 14, y, adjustedFirstBuyItem.getCount() == 1 ? "1" : null);
-            RenderSystem.setShader(GameRenderer::getPositionTexShader);
-            RenderSystem.setShaderTexture(0, TEXTURE);
-            this.setZOffset(this.getZOffset() + 300);
-            drawTexture(matrices, x + 7, y + 12, this.getZOffset(), 0.0F, 176.0F, 9, 2, 256, 512);
-            this.setZOffset(this.getZOffset() - 300);
-        }
-
-    }
-
     @Override
     public boolean mouseScrolled(double mouseX, double mouseY, double amount) {
         int size = this.recipes.size();
@@ -302,14 +284,23 @@ public class FabricationBenchScreen extends HandledScreen<FabricationBenchScreen
             if (this.hovered && FabricationBenchScreen.this.recipes.size() > idx) {
                 FabricationBenchRecipe recipe = FabricationBenchScreen.this.recipes.get(idx);
 
-                if (mouseX < this.x + 53) {
-                    // TODO inputs
-                } else if(mouseX > this.x + 53 && mouseX < this.x + 65) {
-                    if (!FabricationBenchScreen.this.enabledRecipes.getBoolean(recipe)) { // 49-65
+                int posX = mouseX - this.x;
+
+                if (posX < 3) { // 0-3
+                    // nothing
+                }
+                if (posX < 53) { //3-52
+                    int itemIndex = (posX - 3) / 10;
+                    DefaultedList<ItemStack> inputs = recipe.getInputs();
+                    if (inputs.size() > itemIndex) {
+                        FabricationBenchScreen.this.renderTooltip(matrices, inputs.get(itemIndex), mouseX, mouseY);
+                    }
+                } else if (posX < 65) { //53-65
+                    if (!FabricationBenchScreen.this.enabledRecipes.getBoolean(recipe)) {
                         FabricationBenchScreen.this.renderTooltip(matrices, MISSING_INGREDIENTS_TEXT, mouseX, mouseY);
                     }
-                } else {
-                        FabricationBenchScreen.this.renderTooltip(matrices, recipe.getOutput(), mouseX, mouseY);
+                } else { //66+
+                    FabricationBenchScreen.this.renderTooltip(matrices, recipe.getOutput(), mouseX, mouseY);
                 }
             }
 
