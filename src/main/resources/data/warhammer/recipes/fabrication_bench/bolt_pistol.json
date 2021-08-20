@@ -1,0 +1,13 @@
+{
+  "type": "warhammer:fabrication_bench",
+  "ingredients": [
+    {
+      "item": "warhammer:adamantium_ingot",
+      "count": 5
+    }
+  ],
+  "result": {
+    "item": "warhammer:bolt_pistol",
+    "count": 1
+  }
+}

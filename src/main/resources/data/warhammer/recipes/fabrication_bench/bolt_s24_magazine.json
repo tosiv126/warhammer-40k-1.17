@@ -2,12 +2,12 @@
   "type": "warhammer:fabrication_bench",
   "ingredients": [
     {
-      "item": "minecraft:dirt",
-      "count": 5
+      "item": "warhammer:adamantium_ingot",
+      "count": 6
     }
   ],
   "result": {
-    "item": "minecraft:diamond",
+    "item": "warhammer:bolt_s24_magazine",
     "count": 1
   }
 }

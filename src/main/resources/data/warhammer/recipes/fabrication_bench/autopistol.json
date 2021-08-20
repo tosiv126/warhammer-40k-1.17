@@ -1,0 +1,13 @@
+{
+  "type": "warhammer:fabrication_bench",
+  "ingredients": [
+    {
+      "item": "warhammer:ceramite_ingot",
+      "count": 5
+    }
+  ],
+  "result": {
+    "item": "warhammer:autopistol",
+    "count": 1
+  }
+}

@@ -3,10 +3,25 @@
   "pools": [
     {
       "rolls": 1,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "warhammer:imperial_door_block",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ],
           "name": "warhammer:imperial_door_block"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
         }
       ]
     }

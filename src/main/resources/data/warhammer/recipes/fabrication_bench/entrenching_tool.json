@@ -1,0 +1,17 @@
+{
+  "type": "warhammer:fabrication_bench",
+  "ingredients": [
+    {
+      "item": "minecraft:stick",
+      "count": 2
+    },
+    {
+      "item": "warhammer:plasteel_ingot",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "warhammer:entrenching_tool",
+    "count": 1
+  }
+}

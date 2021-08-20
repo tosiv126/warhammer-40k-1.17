@@ -57,7 +57,7 @@ public class IgChainswordVillagerEntity extends PathAwareEntity implements IAnim
             return PlayState.CONTINUE;
         }
         if ((this.dead || this.getHealth() < 0.01 || this.isDead())) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("ig_chainsword_villager.death", false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("ig_chainsword_villager.idle", false));
             return PlayState.CONTINUE;
         }
         event.getController().setAnimation(new AnimationBuilder().addAnimation("ig_chainsword_villager.idle", true));
@@ -79,7 +79,7 @@ public class IgChainswordVillagerEntity extends PathAwareEntity implements IAnim
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this));
 
-        this.goalSelector.add(5, new MeleeAttackGoal(this, 1.0D, true));
+        this.goalSelector.add(5, new MeleeAttackGoal(this, 0.5D, true));
 
         this.goalSelector.add(8, new WanderAroundFarGoal(this, 1.0D));
 

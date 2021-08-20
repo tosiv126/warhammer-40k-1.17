@@ -1,0 +1,17 @@
+{
+  "type": "warhammer:fabrication_bench",
+  "ingredients": [
+    {
+      "item": "minecraft:stick",
+      "count": 2
+    },
+    {
+      "item": "warhammer:ceramite_ingot",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "warhammer:ig_chainsword",
+    "count": 1
+  }
+}

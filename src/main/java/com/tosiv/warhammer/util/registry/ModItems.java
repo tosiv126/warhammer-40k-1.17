@@ -69,7 +69,6 @@ public class ModItems {
     public static ToolItem TRANSONIC_SWORD = new SwordItem(CeramiteToolMaterial.INSTANCE, 4, -1.5F, new Item.Settings().group(Warhammer.GENERAL_GROUP));
 
     public static final Item WH_ICON = new Item(new Item.Settings());
-    public static final Item PULSE_CHARGE = new Item(new Item.Settings());
 
 
     public static void registerItems() {
@@ -101,7 +100,6 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "lho_stick"), LHO_STICK);
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "wh_icon"), WH_ICON);
-        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "pulse_charge"), PULSE_CHARGE);
     }
 
 

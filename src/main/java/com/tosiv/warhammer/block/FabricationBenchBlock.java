@@ -4,6 +4,7 @@ import com.tosiv.warhammer.screen.FabricationBenchScreenHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
@@ -16,6 +17,9 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -27,6 +31,18 @@ public class FabricationBenchBlock extends HorizontalFacingBlock {
         super(settings);
         this.setDefaultState(this.getStateManager().getDefaultState().with(FACING, Direction.NORTH));
     }
+
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext ctx) {
+        //return VoxelShapes.cuboid(0.0f, 0.0f, 0.0f, 1.0f, 0.6875f, 1.0f);
+        final VoxelShape BASE = Block.createCuboidShape(0,0,0,16,1,16);
+        final VoxelShape TOP = Block.createCuboidShape(0,10,0,16,11,16);
+        final VoxelShape MIDDLE = Block.createCuboidShape(1,1,1,15,10,15);
+        final VoxelShape ALL = VoxelShapes.union(BASE, TOP, MIDDLE);
+        return ALL;
+    }
+
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {

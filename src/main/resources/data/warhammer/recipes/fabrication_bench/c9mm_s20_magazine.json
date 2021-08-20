@@ -1,0 +1,13 @@
+{
+  "type": "warhammer:fabrication_bench",
+  "ingredients": [
+    {
+      "item": "warhammer:ceramite_ingot",
+      "count": 3
+    }
+  ],
+  "result": {
+    "item": "warhammer:c9mm_s20_magazine",
+    "count": 1
+  }
+}

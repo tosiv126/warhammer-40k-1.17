@@ -211,6 +211,11 @@ public class ModBlocks {
             .strength(3.0f, 20.0f)
             .sounds(BlockSoundGroup.METAL));
 
+    public static final PuritySeal PURITY_SEAL = new PuritySeal(FabricBlockSettings
+            .of(Material.WOOL)
+            .strength(0.5f, 1.0f)
+            .sounds(BlockSoundGroup.WOOL));
+
     public static final Block FERROCRETE_GREEN_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final Block FERROCRETE_TAN_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final SlabBlock FERROCRETE_SLAB = new SlabBlock(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
@@ -309,6 +314,7 @@ public class ModBlocks {
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "red_barrel"), RED_BARREL);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "computer_block"), COMPUTER_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "purity_seal"), PURITY_SEAL);
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "necron_block"), NECRON_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "necron_glyph_block"), NECRON_GLYPH_BLOCK);
@@ -484,6 +490,8 @@ public class ModBlocks {
                 new BlockItem(ORK_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "red_barrel"),
                 new BlockItem(RED_BARREL, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "purity_seal"),
+                new BlockItem(PURITY_SEAL, new FabricItemSettings().group(Warhammer.WIP_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "imperial_fabrication_bench"), IMPERIAL_FABRICATION_BENCH);
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "imperial_fabrication_bench"), new BlockItem(IMPERIAL_FABRICATION_BENCH, new FabricItemSettings().group(Warhammer.WIP_GROUP)));

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "www",
+        "wcw",
+        "www"
+    ],
+    "key": {
+        "c": {
+            "item": "minecraft:crafting_table"
+        },
+        "w": {
+            "item": "warhammer:plasteel_ingot"
+        }
+    },
+    "result": {
+        "item": "warhammer:imperial_fabrication_bench",
+        "count": 1
+    }
+}

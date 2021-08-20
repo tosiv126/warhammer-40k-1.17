@@ -1,0 +1,21 @@
+{
+  "type": "warhammer:fabrication_bench",
+  "ingredients": [
+    {
+      "item": "minecraft:stick",
+      "count": 2
+    },
+    {
+      "item": "warhammer:plasteel_ingot",
+      "count": 2
+    },
+    {
+      "item": "warhammer:adamantium_ingot",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "warhammer:thunder_hammer",
+    "count": 1
+  }
+}
