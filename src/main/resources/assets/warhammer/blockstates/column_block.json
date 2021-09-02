@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "warhammer:block/column_block" }
+  }
+}

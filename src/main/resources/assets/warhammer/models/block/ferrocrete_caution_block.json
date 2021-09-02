@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "warhammer:blocks/ferrocrete_caution_block"
+  }
+}

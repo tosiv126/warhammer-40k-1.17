@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "warhammer:block/barbed_wire_block" },
+    "facing=east":  { "model": "warhammer:block/barbed_wire_block", "y":  90},
+    "facing=south": { "model": "warhammer:block/barbed_wire_block", "y": 180 },
+    "facing=west":  { "model": "warhammer:block/barbed_wire_block", "y": 270 }
+  }
+}

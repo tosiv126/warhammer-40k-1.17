@@ -216,6 +216,12 @@ public class ModBlocks {
             .strength(0.5f, 1.0f)
             .sounds(BlockSoundGroup.WOOL));
 
+    public static final BarbedWireBlock BARBED_WIRE_BLOCK = new BarbedWireBlock(FabricBlockSettings
+            .of(Material.METAL)
+            .breakByTool(FabricToolTags.AXES,2)
+            .strength(3.0f, 5.0f)
+            .sounds(BlockSoundGroup.METAL));
+
     public static final Block FERROCRETE_GREEN_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final Block FERROCRETE_TAN_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final SlabBlock FERROCRETE_SLAB = new SlabBlock(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
@@ -254,8 +260,14 @@ public class ModBlocks {
     public static final Block FERROCRETE_DARK_DECORATED_3_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final Block FERROCRETE_TAN_DECORATED_2_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final Block FERROCRETE_TAN_DECORATED_3_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final Block FERROCRETE_CAUTION_BLOCK = new Block(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final AlarmBlock ALARM_BLOCK = new AlarmBlock(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final ColumnBlock COLUMN_BLOCK = new ColumnBlock(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final ColumnTopBlock COLUMN_TOP_BLOCK = new ColumnTopBlock(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final ColumnBottomBlock COLUMN_BOTTOM_BLOCK = new ColumnBottomBlock(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final EagleHeadBlock EAGLE_HEAD_BLOCK = new EagleHeadBlock(FabricBlockSettings.copyOf((Blocks.GOLD_BLOCK)));
 
-    public static final Block IMPERIAL_FABRICATION_BENCH = new FabricationBenchBlock(FabricBlockSettings.copyOf(Blocks.SMITHING_TABLE));
+    public static final Block IMPERIAL_FABRICATION_BENCH = new FabricationBenchBlock(FabricBlockSettings.copyOf(Blocks.SMITHING_TABLE).breakByTool(FabricToolTags.PICKAXES,2));
 
     public static void registerBlocks() {
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "adamantium_ore_block"), ADAMANTIUM_ORE_BLOCK);
@@ -292,6 +304,13 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_dark_decorated_3_block"), FERROCRETE_DARK_DECORATED_3_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_decorated_2_block"), FERROCRETE_TAN_DECORATED_2_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_decorated_3_block"), FERROCRETE_TAN_DECORATED_3_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "ferrocrete_caution_block"), FERROCRETE_CAUTION_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "alarm_block"), ALARM_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "column_block"), COLUMN_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "column_top_block"), COLUMN_TOP_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "column_bottom_block"), COLUMN_BOTTOM_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "barbed_wire_block"), BARBED_WIRE_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "eagle_head_block"), EAGLE_HEAD_BLOCK);
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "imperial_door_block"), IMPERIAL_DOOR_BLOCK);
 
@@ -389,6 +408,8 @@ public class ModBlocks {
                 new BlockItem(FERROCRETE_TAN_DECORATED_2_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_decorated_3_block"),
                 new BlockItem(FERROCRETE_TAN_DECORATED_3_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_caution_block"),
+                new BlockItem(FERROCRETE_CAUTION_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_slab"),
                 new BlockItem(FERROCRETE_SLAB, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
@@ -407,6 +428,16 @@ public class ModBlocks {
                 new BlockItem(FERROCRETE_DARK_STAIRS, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "ferrocrete_tan_stairs"),
                 new BlockItem(FERROCRETE_TAN_STAIRS, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "column_block"),
+                new BlockItem(COLUMN_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "column_top_block"),
+                new BlockItem(COLUMN_TOP_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "column_bottom_block"),
+                new BlockItem(COLUMN_BOTTOM_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "eagle_head_block"),
+                new BlockItem(EAGLE_HEAD_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "barrier_block"),
                 new BlockItem(BARRIER_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
@@ -438,6 +469,9 @@ public class ModBlocks {
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "imperial_door_block"),
                 new BlockItem(IMPERIAL_DOOR_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "barbed_wire_block"),
+                new BlockItem(BARBED_WIRE_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "symbol_chaos_block"),
                 new BlockItem(SYMBOL_CHAOS_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
@@ -492,6 +526,8 @@ public class ModBlocks {
                 new BlockItem(RED_BARREL, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "purity_seal"),
                 new BlockItem(PURITY_SEAL, new FabricItemSettings().group(Warhammer.WIP_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "alarm_block"),
+                new BlockItem(ALARM_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "imperial_fabrication_bench"), IMPERIAL_FABRICATION_BENCH);
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "imperial_fabrication_bench"), new BlockItem(IMPERIAL_FABRICATION_BENCH, new FabricItemSettings().group(Warhammer.WIP_GROUP)));

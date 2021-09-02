@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "warhammer:block/alarm_off"
+    },
+    "lit=true": {
+      "model": "warhammer:block/alarm_block"
+    }
+  }
+}

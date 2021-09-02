@@ -1,10 +1,10 @@
 {
   "credit": "Made with Blockbench",
   "textures": {
-    "particle": "warhammer:blocks/tau_block",
-    "side": "warhammer:blocks/tau_light_block",
-    "bottom": "warhammer:blocks/tau_block",
-    "top": "warhammer:blocks/tau_block"
+    "particle": "warhammer:blocks/ferrocrete_block",
+    "side": "warhammer:blocks/alarm_off",
+    "bottom": "warhammer:blocks/ferrocrete_block",
+    "top": "warhammer:blocks/ferrocrete_block"
   },
   "elements": [
     {

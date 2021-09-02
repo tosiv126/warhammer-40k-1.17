@@ -26,6 +26,7 @@
 
   "item.warhammer.nutrient_paste": "Nutrient Paste",
 
+  "entity.warhammer.tau_warrior": "Tau Warrior",
   "entity.warhammer.gun_drone": "Tau Drone",
   "entity.warhammer.scarab": "Necron Scarab",
 
@@ -126,6 +127,13 @@
   "block.warhammer.computer_block": "Computer Block",
   "block.warhammer.red_barrel": "Red Barrel",
   "block.warhammer.symbol_chaos_block": "Chaos Symbol",
+  "block.warhammer.ferrocrete_caution_block": "Caution Ferrocrete",
+  "block.warhammer.alarm_block": "Alarm Block",
+  "block.warhammer.eagle_head_block": "Eagle Head Block",
+  "block.warhammer.barbed_wire_block": "Barbed Wire",
+  "block.warhammer.column_block": "Column",
+  "block.warhammer.column_top_block": "Top Column",
+  "block.warhammer.column_bottom_block": "Bottom Column",
 
   "warhammer.flak_armor.text" : "Equipment of the Imperial Guard",
 

@@ -1,41 +1,21 @@
 {
   "credit": "Made with Blockbench",
+  "texture_size": [64, 64],
   "textures": {
-    "particle": "warhammer:blocks/tau_block",
-    "side": "warhammer:blocks/tau_light_block",
-    "bottom": "warhammer:blocks/tau_block",
-    "top": "warhammer:blocks/tau_block"
+    "0": "warhammer:blocks/column",
+    "particle": "warhammer:blocks/column"
   },
   "elements": [
     {
-      "name": "Cube",
-      "from": [0, 0, 0],
-      "to": [16, 16, 16],
+      "from": [1, 0, 1],
+      "to": [15, 16, 15],
       "faces": {
-        "north": {
-          "uv": [0, 0, 16, 16],
-          "texture": "#side"
-        },
-        "east": {
-          "uv": [0, 0, 16, 16],
-          "texture": "#side"
-        },
-        "south": {
-          "uv": [0, 0, 16, 16],
-          "texture": "#side"
-        },
-        "west": {
-          "uv": [0, 0, 16, 16],
-          "texture": "#side"
-        },
-        "up": {
-          "uv": [0, 0, 16, 16],
-          "texture": "#top"
-        },
-        "down": {
-          "uv": [0, 0, 16, 16],
-          "texture": "#bottom"
-        }
+        "north": {"uv": [0, 0, 3.5, 4], "texture": "#0"},
+        "east": {"uv": [3.5, 0, 7, 4], "texture": "#0"},
+        "south": {"uv": [0, 4, 3.5, 8], "texture": "#0"},
+        "west": {"uv": [3.5, 4, 7, 8], "texture": "#0"},
+        "up": {"uv": [10.5, 3.5, 7, 0], "texture": "#0"},
+        "down": {"uv": [10.5, 3.5, 7, 7], "texture": "#0"}
       }
     }
   ],

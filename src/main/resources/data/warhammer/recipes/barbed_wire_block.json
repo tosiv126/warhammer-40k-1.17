@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " w ",
+        "w w",
+        "xwx"
+    ],
+    "key": {
+        "w": {
+            "item": "minecraft:iron_ingot"
+        },
+        "x": {
+            "tag": "minecraft:planks"
+        }
+    },
+    "result": {
+        "item": "warhammer:barbed_wire_block",
+        "count": 1
+    }
+}
