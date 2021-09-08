@@ -1,0 +1,9 @@
+
+{
+  "variants": {
+      "facing=north": { "model": "warhammer:block/skull_alcove_block" },
+      "facing=east":  { "model": "warhammer:block/skull_alcove_block", "y":  90},
+      "facing=south": { "model": "warhammer:block/skull_alcove_block", "y": 180 },
+      "facing=west":  { "model": "warhammer:block/skull_alcove_block", "y": 270 }
+  }
+}

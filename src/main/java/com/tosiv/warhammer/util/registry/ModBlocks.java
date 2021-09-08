@@ -266,6 +266,10 @@ public class ModBlocks {
     public static final ColumnTopBlock COLUMN_TOP_BLOCK = new ColumnTopBlock(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final ColumnBottomBlock COLUMN_BOTTOM_BLOCK = new ColumnBottomBlock(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
     public static final EagleHeadBlock EAGLE_HEAD_BLOCK = new EagleHeadBlock(FabricBlockSettings.copyOf((Blocks.GOLD_BLOCK)));
+    public static final LampBlock IMPERIAL_LAMP = new LampBlock(FabricBlockSettings.copyOf((ModBlocks.TAU_LIGHT_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final LampBlock NECRON_LAMP = new LampBlock(FabricBlockSettings.copyOf((ModBlocks.NECRON_LIGHT_BLOCK)).breakByTool(FabricToolTags.PICKAXES,3));
+    public static final LampBlock TAU_LAMP = new LampBlock(FabricBlockSettings.copyOf((ModBlocks.TAU_LIGHT_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
+    public static final NecronGlyphBlock SKULL_ALCOVE_BLOCK = new NecronGlyphBlock(FabricBlockSettings.copyOf((ModBlocks.FERROCRETE_BLOCK)).breakByTool(FabricToolTags.PICKAXES,2));
 
     public static final Block IMPERIAL_FABRICATION_BENCH = new FabricationBenchBlock(FabricBlockSettings.copyOf(Blocks.SMITHING_TABLE).breakByTool(FabricToolTags.PICKAXES,2));
 
@@ -311,6 +315,10 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "column_bottom_block"), COLUMN_BOTTOM_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "barbed_wire_block"), BARBED_WIRE_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "eagle_head_block"), EAGLE_HEAD_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "imperial_lamp"), IMPERIAL_LAMP);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "tau_lamp"), TAU_LAMP);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "necron_lamp"), NECRON_LAMP);
+        Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "skull_alcove_block"), SKULL_ALCOVE_BLOCK);
 
         Registry.register(Registry.BLOCK, new Identifier(Warhammer.MOD_ID, "imperial_door_block"), IMPERIAL_DOOR_BLOCK);
 
@@ -438,6 +446,15 @@ public class ModBlocks {
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "eagle_head_block"),
                 new BlockItem(EAGLE_HEAD_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "skull_alcove_block"),
+                new BlockItem(SKULL_ALCOVE_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "imperial_lamp"),
+                new BlockItem(IMPERIAL_LAMP, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "necron_lamp"),
+                new BlockItem(NECRON_LAMP, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "tau_lamp"),
+                new BlockItem(TAU_LAMP, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
 
         Registry.register(Registry.ITEM, new Identifier(Warhammer.MOD_ID, "barrier_block"),
                 new BlockItem(BARRIER_BLOCK, new FabricItemSettings().group(Warhammer.GENERAL_GROUP)));
